@@ -1,6 +1,7 @@
 /**
  * Created by ssthouse on 2015/9/6.
  */
+
 //添加舞台--Container---刷新
 var stage = new createjs.Stage("gameView");
 var container = new createjs.Container();
@@ -11,6 +12,14 @@ createjs.Ticker.addEventListener("tick", stage);
 var n = 2;
 
 function addRect() {
+    if(n == 15){
+        n = 2;
+        container.removeAllChildren();
+        alert("你屌...你赢了...");
+        addRect();
+        return;
+    }
+
     var colorNumber = parseInt(Math.random() * 1000000);
     var colorStr = "#" + colorNumber;
 
@@ -26,8 +35,8 @@ function addRect() {
                 rect.setRectType(2);
             }
 
-            rect.x = x * (400 / n);
-            rect.y = y * (400 / n);
+            rect.x = x * (300 / n);
+            rect.y = y * (300 / n);
 
             //给答案方块设置点击事件
             if(rect.getRectType() == 2){

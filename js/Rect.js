@@ -15,7 +15,7 @@ function Rect(n, color) {
                 //获取一个相近的颜色
                 var colorNumber = parseInt(color.substr(1, color.length - 1));
                 //document.writeln(colorNumber);
-                colorNumber += 0x11;
+                colorNumber += 0x111;
                 //document.writeln(colorNumber);
                 //alert(colorNumber);
                 this.setColor("#" + colorNumber);
@@ -29,7 +29,7 @@ function Rect(n, color) {
 
     this.setColor = function (colorStr) {
         this.graphics.beginFill(colorStr);
-        this.graphics.drawRect(0, 0, 400 / n - 5, 400 / n - 5);
+        this.graphics.drawRect(0, 0, 300 / n - 5,  300/ n - 5);
         this.graphics.endFill();
     }
 
