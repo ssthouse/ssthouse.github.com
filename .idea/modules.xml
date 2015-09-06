@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SeeColor.iml" filepath="$PROJECT_DIR$/SeeColor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssthouse.github.com.iml" filepath="$PROJECT_DIR$/ssthouse.github.com.iml" />
+    </modules>
+  </component>
+</project>
