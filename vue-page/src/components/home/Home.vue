@@ -8,19 +8,12 @@
         <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
       </md-card-header>
     </md-card>
-
-    <md-card style="margin: 8px; ">
-      <md-card-media>
-        <img src="../../assets/duoduo.jpeg" alt="People">
-      </md-card-media>
-      <md-card-header>
-        <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
-      </md-card-header>
-    </md-card>
   </div>
 </template>
 
 <script>
+  const beginDate = new Date(2016, 2, 14)
+
   export default{
     name: 'home',
     data () {
@@ -29,7 +22,10 @@
     props: [],
     methods: {
       getLoveLength () {
-        return '404天'
+        let curDate = new Date()
+        curDate = new Date(curDate.getFullYear(), curDate.getMonth(), curDate.getDate())
+        let dayNum = (curDate.getTime() - beginDate.getTime()) / (24 * 60 * 60 * 1000)
+        return dayNum + '天'
       }
     },
     computed: {},
