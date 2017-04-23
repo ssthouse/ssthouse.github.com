@@ -1,7 +1,7 @@
 <template>
-  <v-ons-page>
+  <div>
     This is the home page.
-  </v-ons-page>
+  </div>
 </template>
 
 <script>

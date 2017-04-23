@@ -1,7 +1,7 @@
 <template>
-  <v-ons-page>
+  <div>
     this is the favorite page.
-  </v-ons-page>
+  </div>
 </template>
 
 <script>
@@ -11,12 +11,8 @@
       return {}
     },
     props: [],
-    methods: {
-
-    },
-    computed: {
-
-    },
+    methods: {},
+    computed: {},
     created: function () {
 
     }

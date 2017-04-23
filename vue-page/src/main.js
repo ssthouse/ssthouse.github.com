@@ -4,14 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // Webpack CSS import
-import 'onsenui/css/onsenui.css'
-import 'onsenui/css/onsen-css-components.css'
 
 // JS import
-import 'onsenui'
-import VueOnsen from 'vue-onsenui'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.css'
 
-Vue.use(VueOnsen)
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 
