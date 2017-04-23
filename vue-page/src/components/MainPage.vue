@@ -1,6 +1,6 @@
 <template>
-  <div class="app-viewport">
-    <keep-alive>
+  <div>
+    <keep-alive style="margin-top: 0;">
       <router-view></router-view>
     </keep-alive>
 
@@ -65,5 +65,6 @@
     position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 50;
   }
 </style>

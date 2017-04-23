@@ -1,4 +1,4 @@
-#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;color:#2c3e50;margin-top:60px}.app-viewport,body,html{height:100%;overflow:hidden}.app-viewport{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}.bottom-bar{position:fixed;width:100%;bottom:0}/*!
+#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;color:#2c3e50;margin-top:60px}.app-viewport,body,html{height:100%;overflow:hidden}.app-viewport{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}.bottom-bar{position:fixed;width:100%;bottom:0;z-index:50}/*!
 * Vue Material v0.7.1
 * Made with love by Marcos Moura
 * Released under the MIT License.

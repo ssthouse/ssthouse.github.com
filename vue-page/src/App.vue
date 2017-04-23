@@ -1,5 +1,7 @@
 <template>
-  <div id="app" style="top: 0; bottom: 0;">
+  <div id="app"
+       class="phone-viewport"
+       style="top: 0; bottom: 0; margin-top: 0;">
     <main-page></main-page>
   </div>
 </template>
