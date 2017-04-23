@@ -6,12 +6,12 @@
                     @update="activeIndex = $event">
 
         <v-ons-tab v-for="(tab, i) in tabs"
-                   :label="tabs[i].label"></v-ons-tab>
+                   :icon="tabs[i].icon"></v-ons-tab>
 
         <template slot="pages">
           <home></home>
-          <home></home>
-          <home></home>
+          <msg></msg>
+          <favorite></favorite>
         </template>
       </v-ons-tabbar>
     </v-ons-page>
@@ -19,21 +19,28 @@
 </template>
 
 <script>
-  import Home from './home/Home.vue'
   import Vue from 'vue'
+  import Home from './home/Home.vue'
+  import Msg from './msg/Msg.vue'
+  import Favorite from './favorite/Favorite.vue'
 
   Vue.component(Home.name, Home)
+  Vue.component(Msg.name, Msg)
+  Vue.component(Favorite.name, Favorite)
 
   export default{
     name: 'main',
     data () {
       return {
         tabs: [{
-          label: 'Home'
+          label: 'Home',
+          icon: 'md-home'
         }, {
-          label: 'news'
+          label: 'news',
+          icon: 'md-email'
         }, {
-          label: 'setting'
+          label: 'setting',
+          icon: 'md-favorite'
         }],
         activeIndex: 0
       }

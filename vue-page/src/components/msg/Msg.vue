@@ -1,12 +1,12 @@
 <template>
   <v-ons-page>
-    This is the home page.
+    This is the msg page.
   </v-ons-page>
 </template>
 
 <script>
   export default{
-    name: 'home',
+    name: 'msg',
     data () {
       return {}
     },
@@ -14,7 +14,6 @@
     methods: {},
     computed: {},
     created: function () {
-
     }
   }
 </script>

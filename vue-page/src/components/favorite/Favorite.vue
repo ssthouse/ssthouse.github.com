@@ -1,18 +1,22 @@
 <template>
   <v-ons-page>
-    This is the home page.
+    this is the favorite page.
   </v-ons-page>
 </template>
 
 <script>
   export default{
-    name: 'home',
+    name: 'favorite',
     data () {
       return {}
     },
     props: [],
-    methods: {},
-    computed: {},
+    methods: {
+
+    },
+    computed: {
+
+    },
     created: function () {
 
     }
