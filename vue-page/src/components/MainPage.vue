@@ -1,20 +1,22 @@
 <template>
-  <div>
+  <div class="app-viewport">
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
 
-    <md-bottom-bar>
-      <md-bottom-bar-item md-icon="home"
-                          @click.native="onClickBottomBtn('home')">Home
-      </md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="alarm"
-                          @click.native="onClickBottomBtn('msg')">Msg
-      </md-bottom-bar-item>
-      <md-bottom-bar-item md-icon="favorite"
-                          @click.native="onClickBottomBtn('favorite')">Favorite
-      </md-bottom-bar-item>
-    </md-bottom-bar>
+    <div class="bottom-bar">
+      <md-bottom-bar>
+        <md-bottom-bar-item md-icon="home"
+                            @click.native="onClickBottomBtn('home')">Home
+        </md-bottom-bar-item>
+        <md-bottom-bar-item md-icon="alarm"
+                            @click.native="onClickBottomBtn('msg')">Msg
+        </md-bottom-bar-item>
+        <md-bottom-bar-item md-icon="favorite"
+                            @click.native="onClickBottomBtn('favorite')">Favorite
+        </md-bottom-bar-item>
+      </md-bottom-bar>
+    </div>
   </div>
 </template>
 
@@ -57,5 +59,11 @@
   .app-viewport {
     display: flex;
     flex-flow: column;
+  }
+
+  .bottom-bar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 </style>
