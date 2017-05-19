@@ -7,13 +7,13 @@
     <div class="bottom-bar">
       <md-bottom-bar>
         <md-bottom-bar-item md-icon="home"
-                            @click.native="onClickBottomBtn('home')">Home
+                            @click.native="onClickBottomBtn('home')">多多
         </md-bottom-bar-item>
         <md-bottom-bar-item md-icon="alarm"
-                            @click.native="onClickBottomBtn('msg')">Msg
+                            @click.native="onClickBottomBtn('msg')">小宝
         </md-bottom-bar-item>
         <md-bottom-bar-item md-icon="favorite"
-                            @click.native="onClickBottomBtn('favorite')">Favorite
+                            @click.native="onClickBottomBtn('favorite')">大宝
         </md-bottom-bar-item>
       </md-bottom-bar>
     </div>

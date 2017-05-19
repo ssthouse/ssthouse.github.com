@@ -1,6 +1,10 @@
 <template>
   <div>
-    This is the msg page.
+    <md-card style="margin: 8px; ">
+      <md-card-media>
+        <img src="../../assets/xiaobao.png" alt="小宝">
+      </md-card-media>
+    </md-card>
   </div>
 </template>
 
