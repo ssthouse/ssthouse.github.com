@@ -2,7 +2,7 @@
   <div style="margin-top: 0; padding-top: 0;">
     <md-card style="margin: 8px; ">
       <md-card-media>
-        <img src="../../assets/duoduo.jpeg" alt="People">
+        <img src="../../assets/baby_family.jpeg" alt="baby_family">
       </md-card-media>
       <md-card-header>
         <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
