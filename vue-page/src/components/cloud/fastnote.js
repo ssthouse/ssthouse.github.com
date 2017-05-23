@@ -11,6 +11,23 @@ export function init () {
 }
 
 export function getLittleBabyFastnote () {
+  return new Promise((resolve, reject) => {
+    new AV.Query('FastNoteBean')
+      .equalTo('isCony', true)
+      .limit(1)
+      .find()
+      .then(beanArray => resolve(beanArray[0]), error => reject(error))
+  })
+}
+
+export function getGiantBabyFastnote () {
+  return new Promise((resolve, reject) => {
+    new AV.Query('FastNoteBean')
+      .equalTo('isCony', false)
+      .limit(1)
+      .find()
+      .then(beanArray => resolve(beanArray[0]), error => reject(error))
+  })
 }
 
 export function testSaveObj () {

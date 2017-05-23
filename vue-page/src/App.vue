@@ -17,7 +17,6 @@
     name: 'app',
     created: function () {
       fastnote.init()
-      fastnote.testSaveObj()
     }
   }
 </script>
