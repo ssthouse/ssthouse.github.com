@@ -1,10 +1,10 @@
 <template>
   <div>
-    <md-card style="margin: 8px; ">
-      <md-card-media>
+    <mu-card style="margin: 8px; ">
+      <mu-card-media>
         <img src="../../assets/dabao.jpeg" alt="大宝">
-      </md-card-media>
-    </md-card>
+      </mu-card-media>
+    </mu-card>
   </div>
 </template>
 

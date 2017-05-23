@@ -4,19 +4,21 @@
       <router-view></router-view>
     </keep-alive>
 
-    <div class="bottom-bar">
-      <md-bottom-bar>
-        <md-bottom-bar-item md-icon="home"
-                            @click.native="onClickBottomBtn('home')">多多
-        </md-bottom-bar-item>
-        <md-bottom-bar-item md-icon="alarm"
-                            @click.native="onClickBottomBtn('msg')">小宝
-        </md-bottom-bar-item>
-        <md-bottom-bar-item md-icon="favorite"
-                            @click.native="onClickBottomBtn('favorite')">大宝
-        </md-bottom-bar-item>
-      </md-bottom-bar>
-    </div>
+    <mu-row class="bottom-bar">
+      <mu-bottom-nav :value="bottomNav"
+                     shift
+                     @change="onChangeBottomNav">
+        <mu-bottom-nav-item value="home"
+                            title="Home"
+                            icon="home"></mu-bottom-nav-item>
+        <mu-bottom-nav-item value="msg"
+                            title="msg"
+                            icon="alarm"></mu-bottom-nav-item>
+        <mu-bottom-nav-item value="favorite"
+                            title="favorite"
+                            icon="favorite"></mu-bottom-nav-item>
+      </mu-bottom-nav>
+    </mu-row>
   </div>
 </template>
 
@@ -33,12 +35,15 @@
   export default{
     name: 'main-page',
     data () {
-      return {}
+      return {
+        bottomNav: 'home'
+      }
     },
     props: [],
     methods: {
-      onClickBottomBtn (btnName) {
-        this.$router.push(btnName)
+      onChangeBottomNav (changeTo) {
+        this.$router.push(changeTo)
+        this.bottomNav = changeTo
       }
     },
     computed: {},

@@ -1,13 +1,13 @@
 <template>
   <div style="margin-top: 0; padding-top: 0;">
-    <md-card style="margin: 8px; ">
-      <md-card-media>
+    <mu-card style="margin: 8px; ">
+      <mu-card-media>
         <img src="../../assets/baby_family.jpeg" alt="baby_family">
-      </md-card-media>
-      <md-card-header>
+      </mu-card-media>
+      <mu-card-header>
         <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
-      </md-card-header>
-    </md-card>
+      </mu-card-header>
+    </mu-card>
 
     <a href="static/index.html">哈哈哈</a>
   </div>
