@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 0; padding-top: 0;">
+  <div>
     <mu-card style="margin: 8px; ">
       <mu-card-media>
         <img src="../../assets/baby_family.jpeg"

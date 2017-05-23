@@ -1,10 +1,10 @@
 <template>
   <div style="height: 100%; overflow-y: hidden;">
-    <mu-row style="margin-bottom: 56px;">
-      <keep-alive style="margin-top: 0;">
+    <div style="padding-bottom: 56px; height: 100%;">
+      <keep-alive>
         <router-view></router-view>
       </keep-alive>
-    </mu-row>
+    </div>
 
     <mu-row style="height: 56px;"
             class="bottom-bar">

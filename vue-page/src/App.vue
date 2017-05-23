@@ -2,7 +2,7 @@
   <div id="app"
        class="phone-viewport"
        style="top: 0; bottom: 0; margin-top: 0;">
-    <main-page></main-page>
+    <main-page style="height: 100%;"></main-page>
   </div>
 </template>
 
@@ -24,6 +24,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    height: 100%;
   }
 </style>
