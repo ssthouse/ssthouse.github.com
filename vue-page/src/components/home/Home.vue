@@ -2,11 +2,13 @@
   <div style="margin-top: 0; padding-top: 0;">
     <mu-card style="margin: 8px; ">
       <mu-card-media>
-        <img src="../../assets/baby_family.jpeg" alt="baby_family">
+        <img src="../../assets/baby_family.jpeg"
+             alt="baby_family">
       </mu-card-media>
-      <mu-card-header>
-        <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
-      </mu-card-header>
+
+      <mu-card-title :title="'已相爱: ' + getLoveLength()"
+                     style="text-align: left; padding-left: 20px;">
+      </mu-card-title>
     </mu-card>
 
     <a href="static/index.html">哈哈哈</a>
