@@ -8,6 +8,8 @@
         <div class="md-title">{{'已相爱: ' + getLoveLength()}}</div>
       </md-card-header>
     </md-card>
+
+    <a href="static/index.html">哈哈哈</a>
   </div>
 </template>
 
