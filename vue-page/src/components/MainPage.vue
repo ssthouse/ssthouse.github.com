@@ -1,10 +1,13 @@
 <template>
-  <div>
-    <keep-alive style="margin-top: 0;">
-      <router-view></router-view>
-    </keep-alive>
+  <div style="height: 100%; overflow-y: hidden;">
+    <mu-row style="margin-bottom: 56px;">
+      <keep-alive style="margin-top: 0;">
+        <router-view></router-view>
+      </keep-alive>
+    </mu-row>
 
-    <mu-row class="bottom-bar">
+    <mu-row style="height: 56px;"
+            class="bottom-bar">
       <mu-bottom-nav :value="bottomNav"
                      shift
                      @change="onChangeBottomNav">
