@@ -9,11 +9,16 @@
 <script>
   import MainPage from './components/MainPage.vue'
   import Vue from 'vue'
+  import * as fastnote from './components/cloud/fastnote'
 
   Vue.component(MainPage.name, MainPage)
 
   export default {
-    name: 'app'
+    name: 'app',
+    created: function () {
+      fastnote.init()
+      fastnote.testSaveObj()
+    }
   }
 </script>
 

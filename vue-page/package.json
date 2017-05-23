@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "leancloud-storage": "^2.4.0",
     "muse-ui": "^2.0.3",
     "vue": "^2.2.6",
     "vue-material": "^0.7.1",
