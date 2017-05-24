@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/home/Home.vue'
-import Msg from '../components/msg/Msg.vue'
-import Favorite from '../components/favorite/Favorite.vue'
+import DuoDuo from '../components/duoduo/DuoDuo.vue'
+import Little from '../components/little/Little.vue'
+import Giant from '../components/giant/Giant.vue'
 
 Vue.use(Router)
 
@@ -10,19 +10,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/duoduo'
     }, {
-      path: '/home',
-      name: 'home',
-      component: Home
+      path: '/duoduo',
+      name: 'duoduo',
+      component: DuoDuo
     }, {
-      path: '/msg',
-      name: 'msg',
-      component: Msg
+      path: '/little',
+      name: 'little',
+      component: Little
     }, {
-      path: '/favorite',
-      name: 'favorite',
-      component: Favorite
+      path: '/giant',
+      name: 'giant',
+      component: Giant
     }
   ]
 })

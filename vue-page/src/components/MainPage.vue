@@ -11,14 +11,14 @@
       <mu-bottom-nav :value="bottomNav"
                      shift
                      @change="onChangeBottomNav">
-        <mu-bottom-nav-item value="home"
-                            title="Home"
+        <mu-bottom-nav-item value="duoduo"
+                            title="DuoDuo"
                             icon="home"></mu-bottom-nav-item>
-        <mu-bottom-nav-item value="msg"
-                            title="msg"
+        <mu-bottom-nav-item value="little"
+                            title="Little"
                             icon="alarm"></mu-bottom-nav-item>
-        <mu-bottom-nav-item value="favorite"
-                            title="favorite"
+        <mu-bottom-nav-item value="giant"
+                            title="Giant"
                             icon="favorite"></mu-bottom-nav-item>
       </mu-bottom-nav>
     </mu-row>
@@ -27,13 +27,13 @@
 
 <script>
   import Vue from 'vue'
-  import Home from './home/Home.vue'
-  import Msg from './msg/Msg.vue'
-  import Favorite from './favorite/Favorite.vue'
+  import DuoDuo from './duoduo/DuoDuo.vue'
+  import Little from './little/Little.vue'
+  import Giant from './giant/Giant.vue'
 
-  Vue.component(Home.name, Home)
-  Vue.component(Msg.name, Msg)
-  Vue.component(Favorite.name, Favorite)
+  Vue.component(DuoDuo.name, DuoDuo)
+  Vue.component(Little.name, Little)
+  Vue.component(Giant.name, Giant)
 
   export default{
     name: 'main-page',

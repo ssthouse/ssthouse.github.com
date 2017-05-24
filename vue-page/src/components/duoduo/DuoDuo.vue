@@ -19,7 +19,7 @@
   const beginDate = new Date(2016, 2, 14)
 
   export default{
-    name: 'home',
+    name: 'duoduo',
     data () {
       return {}
     },
