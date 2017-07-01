@@ -1,6 +1,6 @@
 <template>
   <div style="height: 100%; overflow-y: hidden;">
-    <mu-appbar title="for you"
+    <mu-appbar :title="isCony"
                style="text-align: left; font-style: oblique; font-size: larger;">
       <mu-icon-button icon="menu" slot="left"
                       @click="onMenuClick"></mu-icon-button>
@@ -45,7 +45,8 @@
     name: 'main-page',
     data () {
       return {
-        bottomNav: 'home'
+        bottomNav: 'home',
+        isCony: 'don\'t know'
       }
     },
     props: [],
@@ -58,6 +59,7 @@
         java.openDrawer()
         console.log('on menu clicked')
         console.log('is cony? ' + java.isCony())
+        this.isCony = java.isony()
       }
     },
     computed: {},
