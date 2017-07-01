@@ -2,7 +2,8 @@
   <div style="height: 100%; overflow-y: hidden;">
     <mu-appbar title="for you"
                style="text-align: left; font-style: oblique; font-size: larger;">
-      <mu-icon-button icon="menu" slot="left"></mu-icon-button>
+      <mu-icon-button icon="menu" slot="left"
+                      @click="onMenuClick"></mu-icon-button>
     </mu-appbar>
 
     <div style="padding-bottom: 56px; height: 100%;">
@@ -52,6 +53,11 @@
       onChangeBottomNav (changeTo) {
         this.$router.push(changeTo)
         this.bottomNav = changeTo
+      },
+      onMenuClick () {
+        java.openDrawer()
+        console.log('on menu clicked')
+        console.log('is cony? ' + java.isCony())
       }
     },
     computed: {},
