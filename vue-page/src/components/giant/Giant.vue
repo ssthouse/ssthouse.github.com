@@ -1,20 +1,21 @@
 <template>
-  <div style="height: 100%; width: 100%">
-    <mu-card style="height: 50%; width: 100%">
-      <div ref="littleNote"
-           style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
+  <div style="width: 100%; height: 100%; overflow-y: scroll">
+    <div style="height: 100%;">
+      <mu-card style="height: 50%; width: 100%;">
+        <div ref="littleNote"
+             style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
            font-size: larger; overflow-y: scroll;">
-        {{littleBabyNote}}
-      </div>
-    </mu-card>
+          {{littleBabyNote}}
+        </div>
+      </mu-card>
 
-    <mu-card style="height: 50%; width: 100%;">
-      <div ref="giantNote"
-           style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
+      <mu-card style="height: 50%; width: 100%;">
+        <div ref="giantNote"
+             style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
            font-size: larger; overflow-y: scroll;">{{giantBabyNote}}
-      </div>
-    </mu-card>
-
+        </div>
+      </mu-card>
+    </div>
     <mu-snackbar v-if="snackbar" message="获取fastnote出错 :|"></mu-snackbar>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100%; overflow-y: hidden;">
+  <div style="height: 100vh; overflow-y: hidden;">
     <mu-appbar
       title="For you 🐳"
       style="text-align: left; font-style: oblique; font-size: larger;">
@@ -7,7 +7,7 @@
                       @click="onMenuClick"></mu-icon-button>
     </mu-appbar>
 
-    <div style="padding-bottom: 56px; height: 100%;">
+    <div style="position: absolute; top: 56px; bottom: 56px; width: 100%">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
