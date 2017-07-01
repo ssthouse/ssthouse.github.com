@@ -59,7 +59,7 @@
         java.openDrawer()
         console.log('on menu clicked')
         console.log('is cony? ' + java.isCony())
-        this.isCony = java.isony()
+        this.isCony = 'is cony? ' + java.isCony()
       }
     },
     computed: {},
