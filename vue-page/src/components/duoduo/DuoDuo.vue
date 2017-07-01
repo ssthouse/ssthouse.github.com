@@ -10,8 +10,6 @@
                      style="text-align: left; padding-left: 20px;">
       </mu-card-title>
     </mu-card>
-
-    <a href="static/index.html">哈哈哈</a>
   </div>
 </template>
 
@@ -34,7 +32,6 @@
     },
     computed: {},
     created: function () {
-
     }
   }
 </script>
