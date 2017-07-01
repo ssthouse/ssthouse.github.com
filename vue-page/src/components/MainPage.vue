@@ -58,7 +58,7 @@
       },
       onMenuClick () {
         // TODO 打开安卓侧滑栏
-        java.openDrawer()
+//        java.openDrawer()
       }
     },
     computed: {},

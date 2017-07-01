@@ -9,14 +9,15 @@
 <script>
   import MainPage from './components/MainPage.vue'
   import Vue from 'vue'
-  import * as fastnote from './components/cloud/fastnote'
+  import * as cloud from './components/cloud/cloud'
 
   Vue.component(MainPage.name, MainPage)
 
   export default {
     name: 'app',
     created: function () {
-      fastnote.init()
+      // 初始化leancloud
+      cloud.init()
     }
   }
 </script>

@@ -9,6 +9,8 @@
 </template>
 
 <script>
+  import * as countDown from '../cloud/count_down'
+
   export default{
     name: 'little',
     data () {
@@ -18,6 +20,13 @@
     methods: {},
     computed: {},
     created: function () {
+      // countDown.createCountDown(false, 'test save count down', new Date())
+      countDown.getCountDown(false)
+        .then(beanArray => {
+          console.log(beanArray)
+        }, error => {
+          console.log(error)
+        })
     }
   }
 </script>
