@@ -2,7 +2,7 @@
   <div>
     <mu-card style="margin: 8px; ">
       <mu-card-media>
-        <img src="../../assets/baby_family.jpeg"
+        <img src="../../assets/where_are_you.jpg"
              alt="baby_family">
       </mu-card-media>
 

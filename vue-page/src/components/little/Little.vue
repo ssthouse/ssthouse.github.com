@@ -2,7 +2,7 @@
   <div>
     <mu-card style="margin: 8px;">
       <mu-card-media>
-        <img src="../../assets/xiaobao.png" alt="小宝">
+        <img src="../../assets/where_are_you.jpg" alt="小宝">
       </mu-card-media>
     </mu-card>
   </div>
