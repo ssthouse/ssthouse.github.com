@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <mu-card style="margin-bottom: 8px;">
     <a style="font-size: large">{{countDown.attributes.content}}</a>
+    <br/>
     <a>{{countDown.attributes.target_date}}</a>
-  </div>
+  </mu-card>
 </template>
 
 <script>

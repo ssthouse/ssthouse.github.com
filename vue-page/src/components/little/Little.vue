@@ -1,12 +1,11 @@
 <template>
-  <div>
-    <mu-card style="margin: 8px;">
-      <mu-card-media>
-        <count-down v-for="item in countDownArray"
-                    :countDown="item">
-        </count-down>
-      </mu-card-media>
-    </mu-card>
+  <div style="padding: 8px; width: 100%; height: 100%;">
+    <mu-refresh-control :refreshing="refreshing" :trigger="trigger" @refresh="refresh"/>
+    <mu-card-media>
+      <count-down v-for="item in countDownArray"
+                  :countDown="item">
+      </count-down>
+    </mu-card-media>
   </div>
 </template>
 
@@ -19,11 +18,25 @@
     components: {'count-down': CountDown},
     data () {
       return {
-        countDowns: []
+        countDowns: [],
+        refreshing: false,
+        trigger: null
       }
     },
     props: [],
-    methods: {},
+    methods: {
+      // TODO:
+      refresh () {
+        this.refreshing = true
+        setTimeout(() => {
+          const list = []
+          for (let i = this.num; i < this.num + 10; i++) {
+            list.push('item' + (i + 1))
+          }
+          this.refreshing = false
+        }, 2000)
+      }
+    },
     computed: {
       countDownArray: function () {
         return this.countDowns
@@ -40,6 +53,9 @@
         }, error => {
           console.log(error)
         })
+    },
+    mounted: function () {
+      this.trigger = this.$el
     }
   }
 </script>

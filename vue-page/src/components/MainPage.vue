@@ -1,5 +1,7 @@
 <template>
   <div style="height: 100vh; overflow-y: hidden;">
+
+    <!--上面的顶栏-->
     <mu-appbar
       title="For you 🐳"
       style="text-align: left; font-style: oblique; font-size: larger;">
@@ -7,12 +9,14 @@
                       @click="onMenuClick"></mu-icon-button>
     </mu-appbar>
 
+    <!--中间的内容-->
     <div style="position: absolute; top: 56px; bottom: 56px; width: 100%">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
     </div>
 
+    <!--下面的底栏-->
     <mu-row style="height: 56px;"
             class="bottom-bar">
       <mu-bottom-nav :value="bottomNav"
@@ -58,7 +62,7 @@
       },
       onMenuClick () {
         // TODO 打开安卓侧滑栏
-        // java.openDrawer()
+        java.openDrawer()
       }
     },
     computed: {},
