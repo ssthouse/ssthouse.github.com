@@ -41,7 +41,7 @@
       },
       fetchCountDownArray () {
         // countDown.createCountDown(false, 'test save count down', new Date())
-        countDown.getCountDown(false)
+        countDown.getCountDown(this.$store.state.isCony)
           .then(beanArray => {
             if (beanArray !== undefined && beanArray !== null) {
               this.countDowns = beanArray
@@ -64,6 +64,11 @@
     },
     created: function () {
       this.fetchCountDownArray()
+      // 注册监听事件
+      EventBus.instance.$on(EventBus.UPDATE_COUNT_DOWN_LIST, () => {
+        this.fetchCountDownArray()
+        console.log('get teh event to update conunt down list')
+      })
     },
     mounted: function () {
       this.trigger = this.$refs.list

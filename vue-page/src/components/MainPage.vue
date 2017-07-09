@@ -67,7 +67,8 @@
     },
     computed: {},
     created: function () {
-
+      // TODO
+      this.$store.commit('setUser', !java.isCony())
     }
   }
 </script>

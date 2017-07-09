@@ -6,11 +6,15 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     count: 0,
-    username: 'hahaha'
+    username: 'hahaha',
+    isCony: false
   },
   mutations: {
     increase (state) {
       state.count++
+    },
+    setUser (state, isCony) {
+      state.isCony = isCony
     }
   }
 })
