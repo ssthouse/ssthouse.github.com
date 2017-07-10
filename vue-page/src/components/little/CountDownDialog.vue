@@ -23,6 +23,7 @@
     data () {
       return {
         show: false,
+        dateStr: '',
         targetDate: new Date(),
         content: ''
       }
@@ -40,17 +41,18 @@
           return
         }
         // submit new countDown
+        this.targetDate = new Date(this.dateStr)
         CountDown.createCountDown(this.$store.state.isCony, this.content, this.targetDate)
+          .then(success => {
+            EventBus.instance.$emit(EventBus.UPDATE_COUNT_DOWN_LIST)
+          }, fail => {
+            console.log('create new countdown fail...')
+          })
         // 触发更新事件
-        EventBus.instance.$emit(EventBus.UPDATE_COUNT_DOWN_LIST)
         this.show = false
       }
     },
-    computed: {
-      dateStr () {
-        return Util.getFormatDateStr(this.targetDate)
-      }
-    },
+    computed: {},
     created: function () {
       EventBus.instance.$on(EventBus.OPEN_COUNT_DOWN_DIALOG, () => {
         this.show = true

@@ -1,20 +1,25 @@
 <template>
-  <div style="padding: 8px; width: 100%; height: 100%;">
+  <div style="height: 100%; width: 100%;">
+
     <mu-refresh-control :refreshing="refreshing"
                         :trigger="trigger"
                         @refresh="refresh"></mu-refresh-control>
-    <div ref="list">
-      <count-down v-for="item in countDownArray"
-                  :countDown="item">
-      </count-down>
+
+    <div style="padding: 8px; width: 100%; height: 100%;"
+         ref="page">
+      <div>
+        <count-down v-for="item in countDownArray"
+                    :countDown="item">
+        </count-down>
+      </div>
+      <count-down-dialog></count-down-dialog>
     </div>
 
     <div class="add-count-down">
       <mu-float-button icon="add" secondary @click="onClickAddCountDown()"></mu-float-button>
     </div>
-
-    <count-down-dialog></count-down-dialog>
   </div>
+
 </template>
 
 <script>
@@ -71,7 +76,7 @@
       })
     },
     mounted: function () {
-      this.trigger = this.$refs.list
+      this.trigger = this.$refs.page
     }
   }
 </script>
