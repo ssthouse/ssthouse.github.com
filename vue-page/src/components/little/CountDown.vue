@@ -1,5 +1,5 @@
 <template>
-  <mu-card style="margin-bottom: 8px;">
+  <mu-card style="margin-bottom: 8px; padding: 8px;">
     <mu-row>
       <mu-col width="70">
         <a style="font-size: large; color: black">{{countDown.attributes.content}}</a>
