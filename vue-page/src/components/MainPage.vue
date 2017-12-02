@@ -9,6 +9,15 @@
                       @click="onMenuClick"></mu-icon-button>
     </mu-appbar>
 
+    <!--侧边栏-->
+    <mu-drawer :open="drawerOpen" :docked="false" @close="onMenuClick" class="drawer-container">
+      <mu-list @itemClick="onMenuClick">
+        <mu-list-item title="Menu Item 1"/>
+        <mu-list-item title="Menu Item 2"/>
+        <mu-list-item title="Menu Item 3"/>
+      </mu-list>
+    </mu-drawer>
+
     <!--中间的内容-->
     <div style="position: absolute; top: 56px; bottom: 56px; width: 100%">
       <keep-alive>
@@ -51,6 +60,7 @@
     data () {
       return {
         bottomNav: 'home',
+        drawerOpen: false,
         store: this.store
       }
     },
@@ -63,6 +73,7 @@
       onMenuClick () {
         // TODO 打开安卓侧滑栏
 //         java.openDrawer()
+        this.drawerOpen = !this.drawerOpen
       }
     },
     computed: {},
@@ -73,7 +84,7 @@
   }
 </script>
 
-<style>
+<style lang="less">
   html,
   body,
   .app-viewport {
@@ -91,5 +102,9 @@
     width: 100%;
     bottom: 0;
     z-index: 50;
+  }
+
+  .drawer-container {
+    margin-top: 64px;
   }
 </style>

@@ -1,4 +1,4 @@
-#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;color:#2c3e50;height:100%}.app-viewport,body,html{height:100%;overflow:hidden}.app-viewport{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}.bottom-bar{position:fixed;width:100%;bottom:0;z-index:50}.add-count-down{position:absolute;right:10px;bottom:10px}/*!
+#app{font-family:Avenir,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;color:#2c3e50;height:100%}.add-count-down{position:absolute;right:10px;bottom:10px}/*!
  * Muse UI v2.1.0 (https://github.com/myronliu347/vue-carbon)
  * (c) 2017 Myron Liu 
  * Released under the MIT License.
