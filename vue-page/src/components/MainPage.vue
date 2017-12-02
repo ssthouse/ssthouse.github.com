@@ -23,7 +23,7 @@
                      shift
                      @change="onChangeBottomNav">
         <mu-bottom-nav-item value="duoduo"
-                            title="DuoDuo"
+                            title="Hi bao"
                             icon="home"></mu-bottom-nav-item>
         <mu-bottom-nav-item value="little"
                             title="Little"
