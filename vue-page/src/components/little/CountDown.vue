@@ -8,9 +8,10 @@
       </mu-col>
       <mu-col width="30"
               style="vertical-align: middle;margin: auto">
-        <mu-flat-button label="delete"
+        <mu-raised-button label="delete"
                         style="vertical-align: middle"
-                        @click="onClickDelete()"></mu-flat-button>
+                        @click="onClickDelete()"
+                        color="blue500"></mu-raised-button>
       </mu-col>
     </mu-row>
   </mu-card>

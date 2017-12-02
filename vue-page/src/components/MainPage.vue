@@ -62,13 +62,13 @@
       },
       onMenuClick () {
         // TODO 打开安卓侧滑栏
-         java.openDrawer()
+//         java.openDrawer()
       }
     },
     computed: {},
     created: function () {
       // TODO
-       this.$store.commit('setUser', java.isCony())
+//       this.$store.commit('setUser', java.isCony())
     }
   }
 </script>
