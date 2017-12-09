@@ -1,9 +1,5 @@
 <template>
-  <div id="app"
-       class="phone-viewport"
-       style="top: 0; bottom: 0; margin-top: 0;">
-    <home-page style="height: 100%;"></home-page>
-  </div>
+  <home-page style="height: 100%;"></home-page>
 </template>
 
 <script>

@@ -1,6 +1,5 @@
 <template>
   <v-app>
-
     <v-navigation-drawer
       clipped
       fixed
@@ -39,10 +38,9 @@
       dark
       app
       clipped-left
-      fixed
-    >
-      <v-toolbar-title :style="$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'"
-                       class="ml-0 pl-3">
+      fixed>
+      <v-toolbar-title :style="this.$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'"
+                       class="ml-0 pl-3 toolbar-title">
         <v-toolbar-side-icon @click.stop="onMenuClick()"></v-toolbar-side-icon>
         <span class="hidden-xs-only">Google Contacts</span>
       </v-toolbar-title>
@@ -72,13 +70,9 @@
     </v-toolbar>
 
     <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-top>
           <keep-alive>
             <router-view></router-view>
           </keep-alive>
-        </v-layout>
-      </v-container>
     </v-content>
   </v-app>
 </template>
@@ -119,30 +113,8 @@
 </script>
 
 <style lang="less">
-  html,
-  body,
-  .app-viewport {
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .app-viewport {
-    display: flex;
-    flex-flow: column;
-  }
-
-  .bottom-bar {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 50;
-  }
-
-  .drawer-container {
-    margin-top: 56px;
-  }
-
-  .drawer-bar {
-    display: block;
+  .toolbar-title{
+    text-align: left;
+    padding-left: -16px;
   }
 </style>

@@ -3,8 +3,8 @@
 import App from './App'
 import router from './router'
 // Webpack CSS import
-import 'muse-ui/dist/muse-ui.css'
-import 'muse-ui/dist/theme-light.css' // 使用 carbon 主题
+// import 'muse-ui/dist/muse-ui.css'
+// import 'muse-ui/dist/theme-light.css' // 使用 carbon 主题
 import('../node_modules/vuetify/dist/vuetify.min.css')
 
 // JS import
