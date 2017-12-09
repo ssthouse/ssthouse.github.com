@@ -6,28 +6,40 @@
       v-model="drawerOpen"
       app>
       <v-list dense>
+        <!--duoduo-->
         <v-list-tile to="duoduo">
           <v-list-tile-action>
             <v-icon>home</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Settings</v-list-tile-title>
+            <v-list-tile-title>DuoDuo</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <!--little-->
         <v-list-tile to="little">
           <v-list-tile-action>
             <v-icon>alarm</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Dashboard</v-list-tile-title>
+            <v-list-tile-title>Little</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <!--giant-->
         <v-list-tile to="giant">
           <v-list-tile-action>
             <v-icon>favorite</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Settings</v-list-tile-title>
+            <v-list-tile-title>Giant</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <!--music clock-->
+        <v-list-tile to="music-clock">
+          <v-list-tile-action>
+            <v-icon>music_note</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Music Clock</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
