@@ -22,8 +22,9 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 
 ##TODO:
-日期倒计时功能:
-
-* 定义数据类型 (date, content, isCony)
-* 
-
+* music clock
+    - how to read use's local dir?? 
+    
+    
+* count down
+    - UI 修一下应该就还可以用吧

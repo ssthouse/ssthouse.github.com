@@ -7,12 +7,12 @@
       app>
       <v-list dense>
         <!--duoduo-->
-        <v-list-tile to="duoduo">
+        <v-list-tile to="duoduo" >
           <v-list-tile-action>
             <v-icon>pets</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Duo 🐶</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">Duo 🐶</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--little-->
@@ -21,7 +21,7 @@
             <v-icon>alarm</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Little 🐷</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">Little 🐷</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--giant-->
@@ -30,7 +30,7 @@
             <v-icon>favorite</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Giant 🐹</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">Giant 🐹</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--music clock-->
@@ -40,7 +40,7 @@
             <v-icon>music_note</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Music Clock</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">Music Clock</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile to="music-list">
@@ -48,7 +48,7 @@
             <v-icon>queue_music</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>List</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">List</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile to="music-setting">
@@ -56,7 +56,7 @@
             <v-icon>settings</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Clock Setting</v-list-tile-title>
+            <v-list-tile-title class="larger-menu">Clock Setting</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
 
@@ -69,32 +69,17 @@
       app
       clipped-left
       fixed>
-      <v-toolbar-title :style="this.$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'"
+      <v-toolbar-title style="width: 300px"
                        class="ml-0 pl-3 toolbar-title">
         <v-toolbar-side-icon @click.stop="onMenuClick()"></v-toolbar-side-icon>
-        <span class="hidden-xs-only">💃💃💃 🏃🏃🏃</span>
+        <span>💃💃💃 🏃🏃🏃</span>
       </v-toolbar-title>
-      <v-text-field
-        light
-        solo
-        prepend-icon="search"
-        placeholder="Search"
-        style="max-width: 500px; min-width: 128px"
-      ></v-text-field>
       <div class="d-flex align-center" style="margin-left: auto">
         <v-btn icon>
           <v-icon>apps</v-icon>
         </v-btn>
         <v-btn icon>
           <v-icon>notifications</v-icon>
-        </v-btn>
-        <v-btn icon large>
-          <v-avatar size="32px" tile>
-            <img
-              src="https://vuetifyjs.com/static/doc-images/logo.svg"
-              alt="Vuetify"
-            >
-          </v-avatar>
         </v-btn>
       </div>
     </v-toolbar>
@@ -148,5 +133,9 @@
   .toolbar-title {
     text-align: left;
     padding-left: -16px;
+  }
+
+  .larger-menu{
+    font-size: 15px;
   }
 </style>
