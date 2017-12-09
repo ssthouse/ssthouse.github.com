@@ -1,21 +1,25 @@
 <template>
-  <div style="width: 100%; height: 100%; overflow-y: scroll">
-    <div style="height: 100%;">
-      <mu-card style="height: 50%; width: 100%;">
-        <div ref="littleNote"
-             style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
+  <div style="height: 100%;">
+    <mu-flexbox orient="vertical" style="height: 100%;">
+      <mu-flexbox-item class="flex-demo">
+        <mu-card style="height: 50%; width: 100%;">
+          <div ref="littleNote"
+               style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
            font-size: larger; overflow-y: scroll;">
-          {{littleBabyNote}}
-        </div>
-      </mu-card>
-
-      <mu-card style="height: 50%; width: 100%;">
-        <div ref="giantNote"
-             style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
+            {{littleBabyNote}}
+          </div>
+        </mu-card>
+      </mu-flexbox-item>
+      <mu-flexbox-item class="flex-demo">
+        <mu-card style="height: 50%; width: 100%;">
+          <div ref="giantNote"
+               style="height: 100%; text-align: left; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;
            font-size: larger; overflow-y: scroll;">{{giantBabyNote}}
-        </div>
-      </mu-card>
-    </div>
+          </div>
+        </mu-card>
+      </mu-flexbox-item>
+    </mu-flexbox>
+
     <mu-snackbar v-if="snackbar" message="获取fastnote出错 :|"></mu-snackbar>
   </div>
 </template>

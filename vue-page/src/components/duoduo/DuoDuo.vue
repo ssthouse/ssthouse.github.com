@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mu-card style="margin: 8px; ">
+    <mu-card style="">
       <mu-card-media>
         <img src="../../assets/little.jpg"
              alt="baby_family">

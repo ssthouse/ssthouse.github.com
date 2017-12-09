@@ -6,24 +6,35 @@
       title="For you 🐳"
       style="text-align: left; font-style: oblique; font-size: larger;">
       <mu-icon-button icon="menu" slot="left"
-                      @click="onMenuClick"></mu-icon-button>
+                      @click="onMenuClick">
+      </mu-icon-button>
     </mu-appbar>
 
-    <!--侧边栏-->
-    <mu-drawer :open="drawerOpen" :docked="false" @close="onMenuClick" class="drawer-container">
-      <mu-list @itemClick="onMenuClick">
-        <mu-list-item title="Menu Item 1"/>
-        <mu-list-item title="Menu Item 2"/>
-        <mu-list-item title="Menu Item 3"/>
-      </mu-list>
-    </mu-drawer>
-
     <!--中间的内容-->
-    <div style="position: absolute; top: 56px; bottom: 56px; width: 100%">
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </div>
+    <mu-row style="position: absolute; top: 56px; bottom: 56px; width: 100%">
+      <!--侧边栏-->
+      <mu-col desktop="20" class="drawer-bar">
+        <mu-drawer :open="drawerOpen" @close="onMenuClick" class="drawer-container">
+          <mu-list>
+            <mu-list-item title="Hi my bao" to="duoduo">
+              <mu-icon value="chat_bubble" slot="left"/>
+            </mu-list-item>
+            <mu-list-item title="Menu Item 2" to="little">
+
+            </mu-list-item>
+            <mu-list-item title="Menu Item 3" to="giant">
+
+            </mu-list-item>
+          </mu-list>
+        </mu-drawer>
+      </mu-col>
+
+      <mu-col desktop="80">
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
+      </mu-col>
+    </mu-row>
 
     <!--下面的底栏-->
     <mu-row style="height: 56px;"
@@ -71,15 +82,11 @@
         this.bottomNav = changeTo
       },
       onMenuClick () {
-        // TODO 打开安卓侧滑栏
-//         java.openDrawer()
         this.drawerOpen = !this.drawerOpen
       }
     },
     computed: {},
     created: function () {
-      // TODO
-//       this.$store.commit('setUser', java.isCony())
     }
   }
 </script>
@@ -105,6 +112,10 @@
   }
 
   .drawer-container {
-    margin-top: 64px;
+    margin-top: 56px;
+  }
+
+  .drawer-bar {
+    display: block;
   }
 </style>

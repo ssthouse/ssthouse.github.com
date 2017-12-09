@@ -1,11 +1,11 @@
 <template>
-  <div style="height: 100%; width: 100%;">
+  <div style="">
 
     <mu-refresh-control :refreshing="refreshing"
                         :trigger="trigger"
                         @refresh="refresh"></mu-refresh-control>
 
-    <div style="padding: 8px; width: 100%; height: 100%;"
+    <div style=""
          ref="page">
       <div>
         <count-down v-for="item in countDownArray"
