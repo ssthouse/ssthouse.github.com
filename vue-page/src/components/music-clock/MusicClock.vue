@@ -46,6 +46,7 @@
 
 <script>
   import APlayer from 'aplayer'
+  import * as Types from '../../store/types'
 
   export default {
     data () {
@@ -59,22 +60,14 @@
         }
       }
     },
-    name: 'landing-page',
+    name: 'music-clock',
     components: {},
     methods: {
-      onMusicPauseClick () {
-        this.$eventbus.$emit(this.EventType.MUSIC_PAUSE)
-      },
-      onMusicResumeClick () {
-        this.initMusicPlayer()
-//        this.$eventbus.$emit(this.EventType.MUSIC_RESUME)
-      },
       initMusicPlayer () {
         this.musicPlayer = new APlayer({
           element: document.getElementById('music-player'),                       // Optional, player element
           narrow: false,                                                     // Optional, narrow style
           autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
-          showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
           mutex: true,                                                       // Optional, pause other players when this player playing
           theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
           mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
@@ -105,7 +98,6 @@
       },
       startCountDown () {
         // re construct music player
-        this.musicPlayer.destroy()
         this.initMusicPlayer()
 
         this.$refs.fabIcon.textContent = 'pause'
@@ -143,6 +135,14 @@
     created () {
       this.initListener()
       // load default time-span
+
+      this.$storage.getItem('timeSpan')
+        .then(value => {
+          if (value !== undefined && value !== null) {
+            this.$eventbus.$emit(this.EventType.TIME_SPAN_CHANGE, value)
+            this.$store.commit(Types.UPDATE_TIME_SPAN, value)
+          }
+        })
     }
   }
 </script>
@@ -154,7 +154,7 @@
 
     .count-time-label {
       font-size: large;
-      font-weight:bold;
+      font-weight: bold;
     }
   }
 </style>

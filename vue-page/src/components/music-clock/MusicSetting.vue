@@ -35,6 +35,8 @@
       onTimeSpanChange (value) {
         this.$store.commit(Types.UPDATE_TIME_SPAN, value)
         this.$eventbus.$emit(this.EventType.TIME_SPAN_CHANGE, value)
+        // store in local storage
+        this.$storage.setItem('timeSpan', value)
       }
     }
   }

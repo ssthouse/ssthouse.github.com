@@ -16,6 +16,10 @@ Vue.use(MuseUI)
 import Eventbus from './components/utils/EventBus'
 Vue.use(Eventbus)
 
+// Storage
+import Storage from './store/storage'
+Vue.use(Storage)
+
 Vue.config.productionTip = false
 
 import store from './store/index'
