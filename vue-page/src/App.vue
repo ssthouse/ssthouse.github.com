@@ -2,16 +2,18 @@
   <div id="app"
        class="phone-viewport"
        style="top: 0; bottom: 0; margin-top: 0;">
-    <main-page style="height: 100%;"></main-page>
+    <home-page style="height: 100%;"></home-page>
   </div>
 </template>
 
 <script>
   import MainPage from './components/MainPage.vue'
+  import HomePage from './components/HomePage.vue'
   import Vue from 'vue'
   import * as cloud from './components/cloud/cloud'
 
   Vue.component(MainPage.name, MainPage)
+  Vue.component(HomePage.name, HomePage)
 
   export default {
     name: 'app',

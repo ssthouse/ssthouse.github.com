@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100vh; overflow-y: hidden;">
+  <v-app style="height: 100vh; overflow-y: hidden;">
 
     <!--上面的顶栏-->
     <mu-appbar
@@ -53,7 +53,7 @@
                             icon="favorite"></mu-bottom-nav-item>
       </mu-bottom-nav>
     </mu-row>
-  </div>
+  </v-app>
 </template>
 
 <script>

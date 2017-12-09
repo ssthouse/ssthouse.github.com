@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100%;">
+  <div style="width: 100%; height: 100%;">
     <mu-flexbox orient="vertical" style="height: 100%;">
       <mu-flexbox-item class="flex-demo">
         <mu-card style="height: 50%; width: 100%;">

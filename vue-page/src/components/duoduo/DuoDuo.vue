@@ -1,16 +1,26 @@
 <template>
-  <div>
-    <mu-card style="">
-      <mu-card-media>
-        <img src="../../assets/little.jpg"
-             alt="baby_family">
-      </mu-card-media>
-
-      <mu-card-title :title="'已相爱: ' + getLoveLength()"
-                     style="text-align: left; padding-left: 20px;">
-      </mu-card-title>
-    </mu-card>
-  </div>
+  <v-card style="max-height: 500px; width: 100%; height: 100%;">
+    <v-card-media
+      class="white--text"
+      height="200px"
+      src="../static/little.jpg"
+      alt="baby_family">
+      <v-container fill-height fluid>
+        <v-layout fill-height>
+          <v-flex xs12 align-end flexbox>
+            <span class="headline">{{'已相爱: ' + getLoveLength()}}</span>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-card-media>
+    <v-card-title>
+      <div>
+        <span class="grey--text">Number 10</span><br>
+        <span>Whitehaven Beach</span><br>
+        <span>Whitsunday Island, Whitsunday Islands</span>
+      </div>
+    </v-card-title>
+  </v-card>
 </template>
 
 <script>

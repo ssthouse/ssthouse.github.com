@@ -13,7 +13,6 @@ import MuseUI from 'muse-ui'
 import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
-
 Vue.use(MuseUI)
 Vue.config.productionTip = false
 
