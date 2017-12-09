@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "aplayer": "^1.6.0",
     "leancloud-storage": "^2.4.0",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",

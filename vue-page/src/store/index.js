@@ -3,20 +3,10 @@ import Vue from 'vue'
 
 Vue.use(Vuex)
 
+import modules from './modules'
+
 const store = new Vuex.Store({
-  state: {
-    count: 0,
-    username: 'hahaha',
-    isCony: false
-  },
-  mutations: {
-    increase (state) {
-      state.count++
-    },
-    setUser (state, isCony) {
-      state.isCony = isCony
-    }
-  }
+  modules
 })
 
 export default store

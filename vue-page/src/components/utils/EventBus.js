@@ -6,7 +6,8 @@ Eventbus.install = function (VueInstance, options) {
 
   VueInstance.prototype.EventType = {
     OPEN_COUNT_DOWN_DIALOG: 'little/open_count_down_dialog',
-    UPDATE_COUNT_DOWN_LIST: 'little/update_count_down_list'
+    UPDATE_COUNT_DOWN_LIST: 'little/update_count_down_list',
+    TIME_SPAN_CHANGE: 'music-clock/update_time_span'
   }
 }
 
