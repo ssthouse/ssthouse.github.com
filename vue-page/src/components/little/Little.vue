@@ -26,7 +26,7 @@
   import * as countDown from '../cloud/count_down'
   import CountDown from './CountDown.vue'
   import CountDownDialog from './CountDownDialog.vue'
-  import * as EventBus from '../utils/EventBus'
+//  import * as EventBus from '../utils/EventBus'
 
   export default{
     name: 'little',
@@ -59,7 +59,7 @@
           })
       },
       onClickAddCountDown () {
-        EventBus.instance.$emit(EventBus.OPEN_COUNT_DOWN_DIALOG)
+        this.$eventbus.$emit(this.EventType.OPEN_COUNT_DOWN_DIALOG)
       }
     },
     computed: {
@@ -70,7 +70,7 @@
     created: function () {
       this.fetchCountDownArray()
       // 注册监听事件
-      EventBus.instance.$on(EventBus.UPDATE_COUNT_DOWN_LIST, () => {
+      this.$eventbus.$on(this.EventType.UPDATE_COUNT_DOWN_LIST, () => {
         this.fetchCountDownArray()
         console.log('get teh event to update conunt down list')
       })

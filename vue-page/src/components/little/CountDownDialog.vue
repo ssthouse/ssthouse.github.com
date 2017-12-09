@@ -2,19 +2,18 @@
   <div>
     <mu-dialog :open="show" title="增加倒计时" @close="close">
       <mu-date-picker hintText="日期: "
-                      v-model="dateStr"/>
+                      v-model="dateStr"></mu-date-picker>
       <br/>
       <mu-text-field hintText="时间内容"
-                     v-model="content"/>
+                     v-model="content"></mu-text-field>
       <br/>
-      <mu-flat-button slot="actions" @click="onCancelClick()" primary label="取消"/>
-      <mu-flat-button slot="actions" primary @click="onSureClick()" label="确定"/>
+      <mu-flat-button slot="actions" @click="onCancelClick()" primary label="取消"></mu-flat-button>
+      <mu-flat-button slot="actions" primary @click="onSureClick()" label="确定"></mu-flat-button>
     </mu-dialog>
   </div>
 </template>
 
 <script>
-  import * as EventBus from '../utils/EventBus'
   import Util from '../utils/util'
   import * as CountDown from '../cloud/count_down'
 
@@ -44,7 +43,7 @@
         this.targetDate = new Date(this.dateStr)
         CountDown.createCountDown(this.$store.state.isCony, this.content, this.targetDate)
           .then(success => {
-            EventBus.instance.$emit(EventBus.UPDATE_COUNT_DOWN_LIST)
+            this.$eventbus.$emit(this.EventType.UPDATE_COUNT_DOWN_LIST)
           }, fail => {
             console.log('create new countdown fail...')
           })
@@ -54,7 +53,7 @@
     },
     computed: {},
     created: function () {
-      EventBus.instance.$on(EventBus.OPEN_COUNT_DOWN_DIALOG, () => {
+      this.$eventbus.$on(this.EventType.OPEN_COUNT_DOWN_DIALOG, () => {
         this.show = true
       })
     }
