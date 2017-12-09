@@ -18,8 +18,6 @@
 </template>
 
 <script>
-  import * as EventBus from '../utils/EventBus'
-
   export default{
     name: 'count-down',
     data () {
@@ -33,7 +31,7 @@
         // TODO
         this.countDown.destroy().then(success => {
           console.log('delete success')
-          EventBus.instance.$emit(EventBus.UPDATE_COUNT_DOWN_LIST)
+          this.$eventbus.$emit(this.EventType.UPDATE_COUNT_DOWN_LIST)
         }, fail => {
           console.log('delete err' + fail)
         })

@@ -9,10 +9,10 @@
         <!--duoduo-->
         <v-list-tile to="duoduo">
           <v-list-tile-action>
-            <v-icon>home</v-icon>
+            <v-icon>pets</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>DuoDuo</v-list-tile-title>
+            <v-list-tile-title>Duo 🐶</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--little-->
@@ -21,7 +21,7 @@
             <v-icon>alarm</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Little</v-list-tile-title>
+            <v-list-tile-title>Little 🐷</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--giant-->
@@ -30,10 +30,11 @@
             <v-icon>favorite</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Giant</v-list-tile-title>
+            <v-list-tile-title>Giant 🐹</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         <!--music clock-->
+        <v-divider></v-divider>
         <v-list-tile to="music-clock">
           <v-list-tile-action>
             <v-icon>music_note</v-icon>
@@ -42,6 +43,23 @@
             <v-list-tile-title>Music Clock</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile to="music-list">
+          <v-list-tile-action>
+            <v-icon>queue_music</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>List</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile to="music-setting">
+          <v-list-tile-action>
+            <v-icon>settings</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Clock Setting</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+
       </v-list>
     </v-navigation-drawer>
 
@@ -54,7 +72,7 @@
       <v-toolbar-title :style="this.$vuetify.breakpoint.smAndUp ? 'width: 300px; min-width: 250px' : 'min-width: 72px'"
                        class="ml-0 pl-3 toolbar-title">
         <v-toolbar-side-icon @click.stop="onMenuClick()"></v-toolbar-side-icon>
-        <span class="hidden-xs-only">Google Contacts</span>
+        <span class="hidden-xs-only">💃💃💃 🏃🏃🏃</span>
       </v-toolbar-title>
       <v-text-field
         light
@@ -82,9 +100,9 @@
     </v-toolbar>
 
     <v-content>
-          <keep-alive>
-            <router-view></router-view>
-          </keep-alive>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </v-content>
   </v-app>
 </template>
@@ -94,12 +112,14 @@
   import DuoDuo from './duoduo/DuoDuo.vue'
   import Little from './little/Little.vue'
   import Giant from './giant/Giant.vue'
+  import VListGroup from 'vuetify/es5/components/VList/VListGroup'
 
   Vue.component(DuoDuo.name, DuoDuo)
   Vue.component(Little.name, Little)
   Vue.component(Giant.name, Giant)
 
   export default{
+    components: {VListGroup},
     name: 'home-page',
     data () {
       return {
@@ -125,7 +145,7 @@
 </script>
 
 <style lang="less">
-  .toolbar-title{
+  .toolbar-title {
     text-align: left;
     padding-left: -16px;
   }

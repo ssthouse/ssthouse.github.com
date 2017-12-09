@@ -26,7 +26,6 @@
   import * as countDown from '../cloud/count_down'
   import CountDown from './CountDown.vue'
   import CountDownDialog from './CountDownDialog.vue'
-//  import * as EventBus from '../utils/EventBus'
 
   export default{
     name: 'little',
