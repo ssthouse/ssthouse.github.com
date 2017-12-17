@@ -75,8 +75,8 @@
           listmaxheight: '513px',                                             // Optional, max height of play list
           music: {                                                           // Required, music info, see: ###With playlist
             title: 'Have a rest bao 🤔',                                          // Required, music title
-            author: 'Hans Zimmer/Richard Harvey',                          // Required, music author
-            url: 'http://devtest.qiniudn.com/Preparation.mp3',  // Required, music url
+            author: 'liuxy',                          // Required, music author
+            url: this.randomOneSongUrl(),  // Required, music url
             pic: 'http://devtest.qiniudn.com/Preparation.jpg'    // Optional, music picture
           }
         })
@@ -89,6 +89,12 @@
           this.initMusicPlayer()
           this.startCountDown()
         }
+      },
+      randomOneSongUrl () {
+        let songNames = ['Everglow.mp3', 'Fix you.mp3', 'The Scientist.mp3', 'Yellow.mp3', '只因当时太紧张.mp3']
+        let randomIndex = Math.floor(Math.random() * songNames.length)
+        let songName = songNames[randomIndex]
+        return 'http://ssthouse.github.io/static/music/' + songName
       },
       getCountDownLabel (secondNum) {
         var minuteNum = Number.parseInt(secondNum / 60)
@@ -148,9 +154,11 @@
 </script>
 
 <style lang="less">
+  @base-size: 8px;
+
   .top-count-down {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: @base-size;
+    padding-right: @base-size;
 
     .count-time-label {
       font-size: large;

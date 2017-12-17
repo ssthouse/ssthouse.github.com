@@ -27,7 +27,20 @@
       </v-flex>
     </v-layout>
 
+
+    <!--self define card-->
+    <div>
+      <div
+        style="display: inline-block; width: 400px; height: 200px; background-color: #2c3e50; float: left; border-radius: 8px;">
+        <div>
+          <span
+            style="color: #FFF; float: left; margin-left: 20%; font-size: 24px; position: relative;">Hi, wo de bao!</span>
+          <span style="top: 10px; left: -40px; position: relative; color: #FFF;">left small pin</span>
+        </div>
+      </div>
+    </div>
   </v-container>
+
 </template>
 
 <script>
