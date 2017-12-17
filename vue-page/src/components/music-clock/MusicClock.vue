@@ -91,7 +91,7 @@
         }
       },
       randomOneSongUrl () {
-        let songNames = ['Everglow.mp3', 'Fix you.mp3', 'The Scientist.mp3', 'Yellow.mp3', '只因当时太紧张.mp3']
+        let songNames = ['Everglow.mp3', 'Fix-you.mp3', 'The-Scientist.mp3', 'Yellow.mp3', '只因当时太紧张.mp3']
         let randomIndex = Math.floor(Math.random() * songNames.length)
         let songName = songNames[randomIndex]
         return 'http://ssthouse.github.io/static/music/' + songName
