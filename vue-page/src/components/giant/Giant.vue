@@ -10,8 +10,7 @@
         <div style="position: absolute; right: 20px; bottom: 20px;">
           <v-btn
             @click.native="onOpenLittleDialog()"
-            fab
-            dark
+            fab            dark
             color="pink">
             <v-icon ref="fabIcon">edit</v-icon>
           </v-btn>
