@@ -43,7 +43,7 @@
 </template>
 
 <script>
-  import * as fastnote from '../cloud/fastnote'
+  import * as newNote from '../cloud/new-note-dao'
   import EditNoteDialog from './EditNoteDialog'
 
   export default{
@@ -72,16 +72,15 @@
     },
     computed: {},
     created: function () {
-      fastnote.getLittleBabyFastnote()
+      newNote.getLittleBabyNote()
         .then(noteBean => {
           this.$refs['littleNote'].innerHTML = noteBean.attributes.content
         }, errMsg => {
           this.showSnackbar()
         })
-      fastnote.getGiantBabyFastnote()
+      newNote.getGiantBabyNote()
         .then(noteBean => {
           this.$refs['giantNote'].innerHTML = noteBean.attributes.content
-          console.log(noteBean.attributes.content)
         }, errMsg => {
           this.showSnackbar()
         })
