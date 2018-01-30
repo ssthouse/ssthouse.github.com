@@ -20,6 +20,24 @@ export function getGiantBabyNote () {
   })
 }
 
+export function saveNewNoteBean (noteContent, isLittle) {
+  if (isLittle) {
+    getLittleBabyNote()
+      .then(function (noteBean) {
+        noteBean.set('content', noteContent)
+        noteBean.save()
+          .then(() => console.log('save success'), () => console.log('save fail'))
+      })
+  } else {
+    getGiantBabyNote()
+      .then(function (noteBean) {
+        noteBean.set('content', noteContent)
+        noteBean.save()
+          .then(() => console.log('save success'), () => console.log('save fail'))
+      })
+  }
+}
+
 export function createInitialNote () {
   let NewNoteBean = AV.Object.extend('NewNoteBean')
   let initialConyNode = new NewNoteBean()

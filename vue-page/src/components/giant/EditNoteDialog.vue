@@ -5,6 +5,9 @@
         <v-card-title>
           <span class="headline">User Profile</span>
         </v-card-title>
+        <div class="editable">
+          nawengwlekgwe
+        </div>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="blue darken-1" flat @click.native="onClickCloseButton()">Close</v-btn>
@@ -16,6 +19,8 @@
 </template>
 
 <script>
+//  import MediumEditor fromm 'medium-editor'
+
   export default{
     name: 'edit-note-dialog',
     data () {
@@ -32,7 +37,6 @@
     },
     computed: {},
     created: function () {
-
     }
   }
 </script>

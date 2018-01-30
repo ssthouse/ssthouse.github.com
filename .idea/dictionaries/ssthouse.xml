@@ -2,6 +2,7 @@
   <dictionary name="ssthouse">
     <words>
       <w>eventbus</w>
+      <w>leancloud</w>
       <w>vuetify</w>
     </words>
   </dictionary>
