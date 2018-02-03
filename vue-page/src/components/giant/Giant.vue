@@ -9,14 +9,6 @@
              @blur="onLittleNoteBlur">
           {{littleBabyNote}}
         </div>
-        <div style="position: absolute; right: 20px; bottom: 20px;">
-          <v-btn
-            @click.native="onOpenLittleDialog()"
-            fab dark
-            color="pink">
-            <v-icon ref="fabIcon">edit</v-icon>
-          </v-btn>
-        </div>
       </mu-card>
 
       <v-divider></v-divider>
@@ -29,31 +21,18 @@
              @blur="onGiantNoteBlur">
           {{giantBabyNote}}
         </div>
-        <div style="position: absolute; right: 20px; bottom: 20px;">
-          <v-btn
-            @click="onOpenGiantDialog()"
-            fab
-            dark
-            color="pink">
-            <v-icon ref="fabIcon">edit</v-icon>
-          </v-btn>
-        </div>
       </mu-card>
 
       <mu-snackbar v-if="snackbar" message="获取fastnote出错 :|"></mu-snackbar>
     </div>
-
-    <edit-note-dialog :showDialog="showDialog"></edit-note-dialog>
   </div>
 </template>
 
 <script>
   import * as newNote from '../cloud/new-note-dao'
-  import EditNoteDialog from './EditNoteDialog'
   import MediumEditor from 'medium-editor'
 
   export default{
-    components: {EditNoteDialog},
     name: 'favorite',
     data () {
       return {
@@ -116,9 +95,4 @@
 </script>
 
 <style>
-  .custom-fab {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-  }
 </style>
