@@ -1,0 +1,89 @@
+<template>
+  <div style="">
+
+    <mu-refresh-control :refreshing="refreshing"
+                        :trigger="trigger"
+                        @refresh="refresh"></mu-refresh-control>
+
+    <div style=""
+         ref="page">
+      <div>
+        <count-down v-for="item in countDownArray"
+                    :countDown="item">
+        </count-down>
+      </div>
+      <count-down-dialog></count-down-dialog>
+    </div>
+
+    <div class="add-count-down">
+      <mu-float-button icon="add" secondary @click="onClickAddCountDown()"></mu-float-button>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  import * as countDown from '../cloud/count_down'
+  import CountDown from './CountDown.vue'
+  import CountDownDialog from './CountDownDialog.vue'
+
+  export default{
+    name: 'little',
+    components: {'count-down': CountDown, 'count-down-dialog': CountDownDialog},
+    data () {
+      return {
+        countDowns: [],
+        refreshing: false,
+        trigger: null
+      }
+    },
+    props: [],
+    methods: {
+      refresh () {
+        this.refreshing = true
+        this.fetchCountDownArray()
+      },
+      fetchCountDownArray () {
+        // countDown.createCountDown(false, 'test save count down', new Date())
+        countDown.getCountDown(this.$store.state.isCony)
+          .then(beanArray => {
+            if (beanArray !== undefined && beanArray !== null) {
+              this.countDowns = beanArray
+              console.log(beanArray)
+            }
+            this.refreshing = false
+          }, error => {
+            console.log(error)
+            this.refreshing = false
+          })
+      },
+      onClickAddCountDown () {
+        this.$eventbus.$emit(this.EventType.OPEN_COUNT_DOWN_DIALOG)
+      }
+    },
+    computed: {
+      countDownArray: function () {
+        return this.countDowns
+      }
+    },
+    created: function () {
+      this.fetchCountDownArray()
+      // 注册监听事件
+      this.$eventbus.$on(this.EventType.UPDATE_COUNT_DOWN_LIST, () => {
+        this.fetchCountDownArray()
+        console.log('get teh event to update conunt down list')
+      })
+    },
+    mounted: function () {
+      this.trigger = this.$refs.page
+    }
+  }
+</script>
+
+<style>
+  .add-count-down {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+</style>
