@@ -3,12 +3,10 @@
 </template>
 
 <script>
-  import MainPage from './components/MainPage.vue'
   import HomePage from './components/HomePage.vue'
   import Vue from 'vue'
   import * as cloud from './components/cloud/cloud'
 
-  Vue.component(MainPage.name, MainPage)
   Vue.component(HomePage.name, HomePage)
 
   export default {

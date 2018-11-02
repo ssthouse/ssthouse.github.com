@@ -33,33 +33,6 @@
             <v-list-tile-title class="larger-menu">Giant 🐹</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <!--music clock-->
-        <v-divider></v-divider>
-        <v-list-tile to="music-clock">
-          <v-list-tile-action>
-            <v-icon>music_note</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title class="larger-menu">Music Clock</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile to="music-list">
-          <v-list-tile-action>
-            <v-icon>queue_music</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title class="larger-menu">List</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile to="music-setting">
-          <v-list-tile-action>
-            <v-icon>settings</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title class="larger-menu">Clock Setting</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
       </v-list>
     </v-navigation-drawer>
 
@@ -97,14 +70,13 @@
   import DuoDuo from './duoduo/DuoDuo.vue'
   import Little from './little/Little.vue'
   import Giant from './giant/Giant.vue'
-  import VListGroup from 'vuetify/es5/components/VList/VListGroup'
 
   Vue.component(DuoDuo.name, DuoDuo)
   Vue.component(Little.name, Little)
   Vue.component(Giant.name, Giant)
 
   export default{
-    components: {VListGroup},
+    components: {},
     name: 'home-page',
     data () {
       return {
