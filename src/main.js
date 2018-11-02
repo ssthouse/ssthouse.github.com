@@ -3,9 +3,6 @@
 import App from './App'
 import router from './router'
 import('../node_modules/vuetify/dist/vuetify.min.css')
-
-import('../node_modules/medium-editor/dist/css/medium-editor.css')
-import('../node_modules/medium-editor/dist/css/themes/default.css')
 // UI framework
 import Vue from 'vue'
 import Vuetify from 'vuetify'

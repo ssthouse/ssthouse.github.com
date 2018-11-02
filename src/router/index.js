@@ -10,21 +10,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/duoduo'
+      redirect: '/blog'
     },
     {
-      path: '/duoduo',
-      name: 'duoduo',
+      path: '/blog',
+      name: 'blog',
       component: DuoDuo
     },
     {
-      path: '/little',
-      name: 'little',
+      path: '/code',
+      name: 'code',
       component: Little
     },
     {
-      path: '/giant',
-      name: 'giant',
+      path: '/me',
+      name: 'me',
       component: Giant
     }
   ]
