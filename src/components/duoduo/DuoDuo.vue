@@ -2,48 +2,23 @@
   <v-container fluid>
     <v-layout row>
       <v-flex xs12 lg6>
-        <v-card class="main-banner">
-          <v-card-media class="main-page-card-media" :src="littleUrl" height="240px" alt="baby_family">
-            <v-container fill-height fluid>
-              <v-layout fill-height>
-                <v-flex>
-                  <span class="headline">{{`It has been: ${getLoveLength()} days`}}</span>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card-media>
-        </v-card>
+        <count-date-card></count-date-card>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
-const littleUrl = require('../../assets/little.jpg')
-
-const beginDate = new Date(2016, 2, 14)
+import CountDateCard from './count-date-card/CountDateCard.vue'
 
 export default {
   name: 'duoduo',
+  components: { CountDateCard },
   data() {
-    return {
-      littleUrl
-    }
+    return {}
   },
   props: [],
-  methods: {
-    getLoveLength() {
-      let curDate = new Date()
-      curDate = new Date(
-        curDate.getFullYear(),
-        curDate.getMonth(),
-        curDate.getDate()
-      )
-      let dayNum =
-        (curDate.getTime() - beginDate.getTime()) / (24 * 60 * 60 * 1000)
-      return dayNum
-    }
-  },
+  methods: {},
   computed: {},
   created: function() {}
 }
