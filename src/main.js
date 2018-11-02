@@ -2,30 +2,27 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import App from './App'
 import router from './router'
-import('../node_modules/vuetify/dist/vuetify.min.css')
-// UI framework
+// import VueI18n from 'vue-i18n'
 import Vue from 'vue'
-import Vuetify from 'vuetify'
-
-Vue.use(Vuetify)
-
-// Eventbus
-import Eventbus from './components/utils/EventBus'
-Vue.use(Eventbus)
-
-// Storage
 import Storage from './store/storage'
-Vue.use(Storage)
+import Eventbus from './components/utils/EventBus'
+import store from './store/index'
+import Vuetify from 'vuetify'
+import('../node_modules/vuetify/dist/vuetify.min.css')
+import i18n from './i18n/index'
 
 Vue.config.productionTip = false
 
-import store from './store/index'
+Vue.use(Vuetify)
+Vue.use(Eventbus)
+Vue.use(Storage)
 
 /* eslint-disable no-new */
 new Vue({
+  i18n,
   el: '#app',
   router,
   store,
   template: '<App/>',
-  components: {App}
+  components: { App }
 })
