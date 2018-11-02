@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import DuoDuo from '../components/duoduo/DuoDuo.vue'
-import Little from '../components/little/Little.vue'
-import Giant from '../components/giant/Giant.vue'
+import Me from '../components/me/Me.vue'
+import Blog from '../components/blog/Blog.vue'
+import Code from '../components/code/Code.vue'
 
 Vue.use(Router)
 
@@ -15,17 +15,17 @@ export default new Router({
     {
       path: '/blog',
       name: 'blog',
-      component: DuoDuo
+      component: Blog
     },
     {
       path: '/code',
       name: 'code',
-      component: Little
+      component: Code
     },
     {
       path: '/me',
       name: 'me',
-      component: Giant
+      component: Me
     }
   ]
 })
