@@ -24,9 +24,10 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .main-card {
   padding: 16px;
+  margin: 12px;
 
   .main-title {
     width: 100%;

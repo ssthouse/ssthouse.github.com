@@ -11,7 +11,9 @@ const messages = {
       me: 'Me'
     },
     selfDescription: 'Front-end Developer, Data Visualization enthusiast',
-    aboutMe: 'About Me:'
+    aboutMe: 'About Me',
+    contactMe: 'Contact Me',
+    wechatQrCode: 'Wechat QE code:'
   },
   cn: {
     message: {
@@ -20,7 +22,9 @@ const messages = {
       me: '关于我'
     },
     selfDescription: '前端开发工程师, 数据可视化爱好者',
-    aboutMe: '关于我:'
+    aboutMe: '关于我',
+    contactMe: '联系我',
+    wechatQrCode: '微信二维码:'
   }
 }
 
