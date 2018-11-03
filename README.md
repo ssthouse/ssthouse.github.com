@@ -1,30 +1,7 @@
-# vue-page
-
-> A Vue.js project
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 个人主页
+## Personal HomePage
 
 
-##TODO:
-* music clock
-    - how to read use's local dir?? 
-    
-    
-* count down
-    - UI 修一下应该就还可以用吧
+## TODO
+
+- 多语言切换
