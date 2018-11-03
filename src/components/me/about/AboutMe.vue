@@ -1,14 +1,14 @@
 <template>
   <v-card class="main-card">
     <v-flex xs12>
-      <span class="main-title">About me</span>
+      <span class="main-title">{{$t('aboutMe')}}</span>
     </v-flex>
     <v-divider></v-divider>
 
     <img :src="duoUrl" width="300px" height="300px" />
 
     <div class="self-description">
-      <span>我是一名前端开发, 数据可视化爱好者.</span>
+      <span>{{$t('selfDescription')}}</span>
     </div>
 
   </v-card>
