@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-layout row>
+    <v-layout row wrap>
       <v-flex xs12 lg6>
         <count-date-card></count-date-card>
       </v-flex>
@@ -11,6 +11,10 @@
       <v-flex xs12 lg6>
         <contact-me></contact-me>
       </v-flex>
+
+      <v-flex xs12>
+        <timeline></timeline>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
@@ -19,10 +23,11 @@
 import CountDateCard from './count-date-card/CountDateCard.vue'
 import AboutMe from './about/AboutMe.vue'
 import ContactMe from './about/ContactMe.vue'
+import Timeline from './timeline/Timeline.vue'
 
 export default {
   name: 'duoduo',
-  components: { CountDateCard, AboutMe, ContactMe },
+  components: { CountDateCard, AboutMe, ContactMe, Timeline },
   data() {
     return {}
   },
