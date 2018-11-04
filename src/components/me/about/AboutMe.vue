@@ -5,12 +5,18 @@
     </v-flex>
     <v-divider></v-divider>
 
-    <img :src="duoUrl" width="300px" height="300px" />
+    <img :src="duoUrl" width="260px" height="260px" />
 
     <div class="self-description">
       <span>{{$t('selfDescription')}}</span>
     </div>
 
+    <div class="self-description">
+      <span>
+        <a href="https://www.worksap.com/" target="_blank">Works Applications</a>
+        前端开发工程师
+      </span>
+    </div>
   </v-card>
 </template>
 <script>
@@ -37,9 +43,10 @@ export default {
   .self-description {
     display: flex;
     flex-direction: column;
+    margin-bottom: 8px;
 
     span {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }

@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="less">
+@import './index.less';
+
 .toolbar-title {
   text-align: left;
   padding-left: -16px;

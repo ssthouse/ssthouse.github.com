@@ -43,6 +43,7 @@ export default {
 .lang-selector {
   min-width: 280px;
   background-color: #212121 !important;
+  box-shadow: none !important;
 }
 </style>
 
