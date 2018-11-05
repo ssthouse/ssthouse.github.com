@@ -10,4 +10,5 @@
   * contact me card
   * personal timeline card
 - image compress
+- add tab icon
 
