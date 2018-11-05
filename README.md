@@ -9,4 +9,5 @@
   * about me card
   * contact me card
   * personal timeline card
+- image compress
 

@@ -3,7 +3,6 @@
     <v-flex xs12>
       <span class="main-title">{{$t('aboutMe')}}</span>
     </v-flex>
-    <v-divider></v-divider>
 
     <img :src="duoUrl" width="260px" height="260px" />
 
