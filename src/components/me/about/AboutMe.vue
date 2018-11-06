@@ -13,7 +13,7 @@
     <div class="self-description">
       <span>
         <a href="https://www.worksap.com/" target="_blank">Works Applications</a>
-        前端开发工程师
+        R & D Engineer
       </span>
     </div>
   </v-card>

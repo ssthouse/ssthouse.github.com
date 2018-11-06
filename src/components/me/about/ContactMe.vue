@@ -21,14 +21,14 @@ export default {
       qrCodeUrl,
       personalInfoList: [
         {
-          title: '知乎:',
-          href: 'https://www.zhihu.com/people/shenshuntain/',
+          title: 'Github:',
+          href: 'https://github.com/ssthouse',
           text: '@ssthouse',
           pureText: false
         },
         {
-          title: 'Github:',
-          href: 'https://github.com/ssthouse',
+          title: '知乎:',
+          href: 'https://www.zhihu.com/people/shenshuntain/',
           text: '@ssthouse',
           pureText: false
         },
