@@ -1,11 +1,11 @@
 <template>
-  <v-card class="main-banner">
-    <v-card-media class="main-page-card-media" :src="littleUrl" height="240px" alt="baby_family">
+  <v-card class="main-card no-padding">
+    <v-card-media class="main-page-card-media" :src="imageUrl" height="200px" alt="baby_family">
       <v-container fill-height fluid>
         <v-layout fill-height>
-          <v-flex>
-            <span class="headline">{{`It has been: ${getLoveLength()} days`}}</span>
-          </v-flex>
+          <div class="title-container">
+            <span :class="['headline', position]">{{`It has been: ${getLoveLength()} days`}}</span>
+          </div>
         </v-layout>
       </v-container>
     </v-card-media>
@@ -13,14 +13,10 @@
 </template>
 
 <script>
-const beginDate = new Date(2016, 2, 14)
-const littleUrl = require('../../../assets/little.jpg')
-
 export default {
+  props: ['imageUrl', 'startDate', 'position'],
   data() {
-    return {
-      littleUrl
-    }
+    return {}
   },
   methods: {
     getLoveLength() {
@@ -31,9 +27,35 @@ export default {
         curDate.getDate()
       )
       let dayNum =
-        (curDate.getTime() - beginDate.getTime()) / (24 * 60 * 60 * 1000)
+        (curDate.getTime() - this.startDate.getTime()) / (24 * 60 * 60 * 1000)
       return dayNum
     }
   }
 }
 </script>
+<style lang="less">
+.main-card.no-padding {
+  padding: 0;
+}
+
+.title-container {
+  display: flex;
+  width: 100%;
+
+  span {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .top {
+    align-self: flex-start;
+    justify-content: center;
+  }
+
+  .bottom {
+    align-self: flex-end;
+    justify-content: center;
+  }
+}
+</style>
+

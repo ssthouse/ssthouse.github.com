@@ -10,7 +10,8 @@
         <about-me></about-me>
         <contact-me></contact-me>
 
-        <count-date-card></count-date-card>
+        <count-date-card position="top" :image-url="require('../../assets/little.jpg')" :start-date="new Date(2016, 2, 14)" />
+        <count-date-card position="bottom" :image-url="require('../../assets/duo.jpeg')" :start-date="new Date(2016, 5, 1)" />
       </v-flex>
     </v-layout>
   </v-container>

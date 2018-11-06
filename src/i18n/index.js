@@ -13,7 +13,8 @@ const messages = {
     selfDescription: 'Front-end Developer, Data Visualization enthusiast',
     aboutMe: 'About Me',
     contactMe: 'Contact Me',
-    wechatQrCode: 'Wechat QE code:'
+    wechatQrCode: 'Wechat QE code:',
+    countDate: 'It has been {dayNum} days'
   },
   cn: {
     message: {
@@ -24,7 +25,8 @@ const messages = {
     selfDescription: '前端开发工程师, 数据可视化爱好者',
     aboutMe: '关于我',
     contactMe: '联系我',
-    wechatQrCode: '微信二维码:'
+    wechatQrCode: '微信二维码:',
+    countDate: '与你相遇的第 {dayNum} 天'
   }
 }
 
