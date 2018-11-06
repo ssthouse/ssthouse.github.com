@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="darken-3" dark>
+  <v-toolbar color="darken-3" dark fixed height="48px">
     <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title>SSTHOUSE</v-toolbar-title>
     <v-spacer></v-spacer>

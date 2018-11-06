@@ -2,7 +2,7 @@
   <v-app>
     <toolbar></toolbar>
 
-    <v-content>
+    <v-content class="main-content">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -35,5 +35,9 @@ export default {
 
 .larger-menu {
   font-size: 15px;
+}
+
+.main-content {
+  margin-top: 48px;
 }
 </style>

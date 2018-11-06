@@ -1,7 +1,7 @@
 <template>
   <div class="time-piece">
     <div class="title-row">
-      <v-chip disabled="true" class="time-title">
+      <v-chip :disabled="true" class="time-title">
         <v-icon>event</v-icon>
         {{timeTitle}}
       </v-chip>
@@ -23,7 +23,11 @@ export default {
 
 <style lang="less" scoped>
 .time-piece {
+  background-color: #eeeeee;
+  border-radius: 5px;
   font-size: 1.6rem;
+  margin-bottom: 8px;
+  padding: 8px;
 
   .title-row {
     text-align: left;
@@ -32,15 +36,19 @@ export default {
       i {
         margin-right: 8px;
       }
-      width: 120px;
+      min-width: 120px;
       font-size: 1.4rem;
     }
 
     .title {
+      font-weight: bold;
     }
   }
 
   .content {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    text-align: left;
   }
 }
 </style>
