@@ -37,7 +37,7 @@
 
     <time-piece time-title="2016年 9月" title="秋招">
       <div slot="content">收获17份offer. 最后一个也是最终选择的offer:
-        <b>Works Applications R & D Engineer</b>
+        <b>Works Applications R&D Engineer</b>
       </div>
     </time-piece>
 

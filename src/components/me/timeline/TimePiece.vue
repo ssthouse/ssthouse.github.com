@@ -5,7 +5,7 @@
         <v-icon>event</v-icon>
         {{timeTitle}}
       </v-chip>
-      <span class="title">{{title}}</span>
+      <span class="sub-title">{{title}}</span>
     </div>
     <div class="content">
       <slot name="content" />
@@ -26,8 +26,8 @@ export default {
   background-color: #eeeeee;
   border-radius: 5px;
   font-size: 1.6rem;
-  margin-bottom: 8px;
-  padding: 8px;
+  margin-bottom: 16px;
+  padding: 4px 8px 0px 8px;
 
   .title-row {
     text-align: left;
@@ -40,14 +40,15 @@ export default {
       font-size: 1.4rem;
     }
 
-    .title {
+    .sub-title {
+      font-size: 1.2rem;
       font-weight: bold;
     }
   }
 
   .content {
     padding: 8px 16px;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     text-align: left;
   }
 }

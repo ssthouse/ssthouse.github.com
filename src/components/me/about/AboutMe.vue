@@ -13,7 +13,7 @@
     <div class="self-description">
       <span>
         <a href="https://www.worksap.com/" target="_blank">Works Applications</a>
-        R & D Engineer
+        R&D Engineer
       </span>
     </div>
   </v-card>
