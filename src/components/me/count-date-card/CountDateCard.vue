@@ -4,7 +4,7 @@
       <v-container fill-height fluid>
         <v-layout fill-height>
           <div class="title-container">
-            <span :class="['headline', position]">{{`It has been: ${getLoveLength()} days`}}</span>
+            <span :class="['headline', position]">{{$t('countDate', {'dayNum': getLoveLength()})}}</span>
           </div>
         </v-layout>
       </v-container>
