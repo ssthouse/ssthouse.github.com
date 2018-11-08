@@ -6,7 +6,9 @@
       </a>
       <span class="date-title">2018年8月</span>
     </div>
-    <img class="blog-img" :src="blog.img" height="160px" />
+    <div class="img-container" v-if="blog.img">
+      <img class="blog-img" :src="blog.img" height="auto" width="100%" />
+    </div>
   </v-card>
 </template>
 <script>
@@ -34,6 +36,13 @@ export default {
     .title {
       font-size: 1.6rem;
       text-align: left;
+
+      transition-property: color;
+      transition-duration: 1s;
+    }
+
+    .title:hover {
+      color: black;
     }
 
     .date-title {
@@ -42,8 +51,15 @@ export default {
     }
   }
 
-  .blog-img {
-    width: 100%;
+  .img-container {
+    height: 160px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    .blog-img {
+      width: 100%;
+    }
   }
 }
 </style>

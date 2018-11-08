@@ -27,48 +27,65 @@ export default {
         },
         {
           title: '以 Join 的方式来思考 D3.js',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img: require('../../assets/d3-blog-img/think-with-join.jpg'),
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/thinking-with-join/thinking-with-join.md'
         },
         {
           title: '用 D3.js 十分钟实现字符跳动效果',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img:
+            'https://github.com/ssthouse/d3-blog/raw/master/charactor-jump/first-step.gif',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/charactor-jump/charactor-jump.md'
         },
 
         {
-          title: '[译] D3.js 嵌套选择集 (Nested Selection)',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          title: '[译]D3.js 之 d3-selection 原理',
+          img:
+            'https://github.com/ssthouse/d3-blog/raw/master/how-selections-work/img/data_join.png',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/how-selections-work/blog.md'
         },
         {
+          title: '[译] D3.js 嵌套选择集 (Nested Selection)',
+          img:
+            'https://github.com/ssthouse/d3-blog/raw/master/nested-selection/img/5.png',
+          href:
+            'https://github.com/ssthouse/d3-blog/blob/master/nested-selection/blog.md'
+        },
+        {
           title: '[译] D3.js 之 d3-shap 简介]',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img: require('../../assets/d3-blog-img/d3-shape.jpg'),
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/d3-shape-intro/blog.md'
         }
       ],
       dataVizBlogList: [
         {
+          title: 'Github Repository 数据可视化',
+          img: require('../../assets/d3-blog-img/github-viz.png'),
+          href:
+            'https://github.com/ssthouse/d3-blog/blob/master/github-visualization/blog.md'
+        },
+        {
           title: '可视化讲解 DOM 构建过程',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img:
+            'https://raw.githubusercontent.com/ssthouse/d3-blog/master/dom-render/img/step9.png',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/dom-render/blog.md'
         },
 
         {
           title: '可视化讲解 深度优先遍历 (DFT)',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img: require('../../assets/d3-blog-img/dft-demo.png'),
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/viz-depth-first-traversal/blog.md'
         },
         {
           title:
             '用 D3.js 画一个手机专利关系图, 看看苹果,三星,微软间的专利纠葛',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img:
+            'https://raw.githubusercontent.com/ssthouse/d3-blog/master/mobile-patent-suit/img/row_display.png',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/mobile-patent-suit/blog.md'
         }
@@ -76,13 +93,12 @@ export default {
       frontEndBlogList: [
         {
           title: '使用 github pages, 快速部署你的静态网页',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
+          img: require('../../assets/d3-blog-img/github-page.jpg'),
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/use-github-page-efficiently/blog.md'
         },
         {
           title: '创建, 发布自己的 Vue UI 组件库',
-          img: require('../../assets/d3-blog-img/d3-学习之路.png'),
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/create-own-vue-library/blog.md'
         }
@@ -99,6 +115,8 @@ export default {
 <style lang="less">
 .blog-container {
   padding: 16px;
+  padding-left: 10%;
+  max-width: 1200px;
 
   .blog-category {
     font-size: 2rem;
