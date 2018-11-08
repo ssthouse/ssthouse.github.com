@@ -4,7 +4,7 @@
       <a class="title" target="_blank" :href="blog.href">
         <span>{{blog.title}}</span>
       </a>
-      <span class="date-title">2018年8月</span>
+      <span class="date-title">{{blog.dateTitle}}</span>
     </div>
     <div class="img-container" v-if="blog.img">
       <img class="blog-img" :src="blog.img" height="auto" width="100%" />
