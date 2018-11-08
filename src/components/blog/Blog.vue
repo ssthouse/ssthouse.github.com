@@ -1,13 +1,13 @@
 <template>
   <div class="blog-container">
     <h3>D3.js 相关</h3>
-    <blog-card v-for="blog in d3BlogList" :key="blog.title" :blog="blog"></blog-card>
+    <blog-card v-for="blog in d3BlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
 
     <h3>数据可视化实践</h3>
-    <blog-card v-for="blog in dataVizBlogList" :key="blog.title" :blog="blog"></blog-card>
+    <blog-card v-for="blog in dataVizBlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
 
     <h3>前端杂谈</h3>
-    <blog-card v-for="blog in frontEndBlogList" :key="blog.title" :blog="blog"></blog-card>
+    <blog-card v-for="blog in frontEndBlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
   </div>
 </template>
 
@@ -96,9 +96,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .blog-container {
   padding: 16px;
+
+  .blog-card {
+    margin-bottom: 16px;
+  }
 }
 </style>
 
