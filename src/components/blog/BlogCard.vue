@@ -1,7 +1,9 @@
 <template>
   <v-card class="blog-card">
-    <span>{{blog.title}}</span>
-    <img class="blog-img" :src="blog.image" />
+    <a class="title" target="_blank" :href="blog.href">
+      <span>{{blog.title}}</span>
+    </a>
+    <img class="blog-img" :src="blog.img" height="160px" />
   </v-card>
 </template>
 <script>
@@ -14,8 +16,16 @@ export default {
 </script>
 <style lang="less" scoped>
 .blog-card {
-  .blog-img{
-    
+  padding: 8px;
+
+  .title {
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .blog-img {
+    width: 100%;
   }
 }
 </style>
