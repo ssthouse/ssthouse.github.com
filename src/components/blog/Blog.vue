@@ -1,12 +1,12 @@
 <template>
   <div class="blog-container">
-    <h3>D3.js 相关</h3>
+    <h3 class="blog-category">D3.js 相关</h3>
     <blog-card v-for="blog in d3BlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
 
-    <h3>数据可视化实践</h3>
+    <h3 class="blog-category">数据可视化实践</h3>
     <blog-card v-for="blog in dataVizBlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
 
-    <h3>前端杂谈</h3>
+    <h3 class="blog-category">前端杂谈</h3>
     <blog-card v-for="blog in frontEndBlogList" :key="blog.title" :blog="blog" class="blog-card"></blog-card>
   </div>
 </template>
@@ -100,34 +100,17 @@ export default {
 .blog-container {
   padding: 16px;
 
+  .blog-category {
+    font-size: 2rem;
+    text-align: left;
+    margin: 32px 0 12px 0;
+    padding: 4px 16px;
+    border-left: 4px solid #1976d2aa;
+    background-color: rgba(238, 238, 238, 0.746);
+  }
+
   .blog-card {
     margin-bottom: 16px;
   }
 }
 </style>
-
-
-
-// [](https://github.com/ssthouse/d3-blog/blob/master/nested-selection/blog.md)
-
-// [[译]D3.js 之 d3-selection 原理]()
-
-// ### D3 shape
-
-// [()
-
-// ### 数据可视化 实践
-
-// []()
-
-// []() ==> [在线 demo](https://ssthouse.github.io/visual-explain/#/list/domRender)
-
-// []() ==> [在线demo](https://ssthouse.github.io/visual-explain/#/list/dft)
-
-// []() ==> [在线 demo](https://ssthouse.github.io/visual-explain/#/list/patent-suit)
-
-// [Github Repository 数据可视化](https://github.com/ssthouse/d3-blog/blob/master/github-visualization/blog.md) ==> [在线 demo](https://ssthouse.github.io/github-visualization/#/main)
-
-// ### 前端 Tips:
-
-// []()
