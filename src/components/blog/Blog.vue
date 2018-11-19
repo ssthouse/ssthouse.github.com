@@ -129,12 +129,17 @@ export default {
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/create-own-vue-library/blog.md'
         },
-
         {
-          title: 'Attribute VS Property',
+          title: '前端杂谈: Attribute VS Property',
           dateTitle: '2018-11-13',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/frontend/attr-vs-prop/attr_vs_prop_cn.md'
+        },
+        {
+          title: '前端杂谈: CSS权重(Specificity)',
+          dateTitle: '2018-11-19',
+          href:
+            'https://github.com/ssthouse/d3-blog/blob/master/frontend/css-specificity/css-specificity.md'
         }
       ]
       return list.sort(this.sortFunc)
