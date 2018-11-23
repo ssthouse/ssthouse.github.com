@@ -1,12 +1,12 @@
 {
-  "name": "vue-page",
+  "name": "ssthouse-personal-homepage",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": " <ssthouse@163.com>",
+  "author": "ssthouse <ssthouse@163.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.base.conf.js --mode development  --open --hot",
-    "build": "webpack --config build/webpack.base.conf.js --mode production"
+    "dev": "webpack-dev-server --config build/webpack.conf.js --mode development  --open --hot",
+    "build": "webpack --config build/webpack.conf.js --mode production"
   },
   "dependencies": {
     "leancloud-storage": "^2.4.0",
