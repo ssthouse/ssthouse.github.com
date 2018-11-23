@@ -140,6 +140,12 @@ export default {
           dateTitle: '2018-11-19',
           href:
             'https://github.com/ssthouse/d3-blog/blob/master/frontend/css-specificity/css-specificity.md'
+        },
+        {
+          title: '前端杂谈: DOM event 原理',
+          dateTitle: '2018-11-22',
+          href:
+            'https://github.com/ssthouse/d3-blog/blob/master/frontend/dom-event/how_dom_event_works_cn.md'
         }
       ]
       return list.sort(this.sortFunc)
