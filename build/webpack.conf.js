@@ -1,6 +1,7 @@
 var path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -13,7 +14,7 @@ function resolve(dir) {
 
 module.exports = {
   entry: './src/main.js',
-  plugins: [htmlPlugin, new VueLoaderPlugin()],
+  plugins: [htmlPlugin, new VuetifyLoaderPlugin(), new VueLoaderPlugin()],
   output: {
     filename: '[name]_bundle.js',
     path: __dirname + '/../',
@@ -59,6 +60,11 @@ module.exports = {
       {
         test: /\.less$/,
         use: ['vue-style-loader', 'css-loader', 'less-loader']
+      },
+
+      {
+        test: /\.styl$/,
+        use: ['vue-style-loader', 'css-loader', 'stylus-loader']
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/,
