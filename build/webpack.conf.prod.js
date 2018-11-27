@@ -1,7 +1,6 @@
 var path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -20,9 +19,11 @@ module.exports = {
   entry: './src/main.js',
   plugins: [
     htmlPlugin,
-    new VuetifyLoaderPlugin(),
     new VueLoaderPlugin(),
-    new CompressionPlugin()
+    new CompressionPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerPort: 9999
+    })
   ],
   output: {
     filename: '[name]_bundle.js',

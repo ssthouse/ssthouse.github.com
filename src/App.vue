@@ -4,15 +4,10 @@
 
 <script>
 import MainView from './components/MainView.vue'
-import * as cloud from './components/cloud/cloud'
 
 export default {
   name: 'app',
   components: { MainView },
-  created: function() {
-    // 初始化leancloud
-    cloud.init()
-  }
 }
 </script>
 
