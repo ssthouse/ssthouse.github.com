@@ -5,7 +5,7 @@
   "author": "ssthouse <ssthouse@163.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.conf.js --mode development --hot",
+    "dev": "webpack-dev-server --config build/webpack.conf.dev.js --mode development --hot",
     "build": "webpack --config build/webpack.conf.prod.js --mode production"
   },
   "dependencies": {
