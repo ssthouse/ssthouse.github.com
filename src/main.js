@@ -9,6 +9,8 @@ import Eventbus from './components/utils/EventBus'
 import store from './store/index'
 import Vuetify, {
   VApp,
+  VBtn,
+  VSelect,
   VToolbar,
   VCard,
   VCardText,
@@ -26,6 +28,8 @@ Vue.config.productionTip = false
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VBtn,
+    VSelect,
     VToolbar,
     VCard,
     VCardText,
