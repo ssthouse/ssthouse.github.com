@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.conf.js --mode development --hot",
-    "build": "webpack --config build/webpack.conf.js --mode production"
+    "build": "webpack --config build/webpack.conf.prod.js --mode production"
   },
   "dependencies": {
     "leancloud-storage": "^2.4.0",
