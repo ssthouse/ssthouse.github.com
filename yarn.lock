@@ -1735,13 +1735,6 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-codependency@^2.1.0:
-  version "2.1.0"
-  resolved "http://registry.npm.taobao.org/codependency/download/codependency-2.1.0.tgz#597d01ccc6b2704ab8d7a12af5d27ac9b4e27e8a"
-  integrity sha512-JIdmYkE8Z6jwH1OUf4a5H5jk9YShPQkaYPUAiN+ktyChmPP77LGbeKrxWGPqdCnpTmt0hRIn8TXBVu01U3HDhg==
-  dependencies:
-    semver "^5.3.0"
-
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -7281,14 +7274,6 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
   integrity sha512-mFbcWoDIJi0w0Za4emyLiW72Jae0yjANHbCVquMKijcavBGypqlF7zHRgMa5k4sesdv7hv2rB4JPdZfR+TPfhQ==
-
-vuetify-loader@^1.0.7:
-  version "1.0.7"
-  resolved "http://registry.npm.taobao.org/vuetify-loader/download/vuetify-loader-1.0.7.tgz#bcfb867d4d1fcd36c886a381de0a32edf1985731"
-  integrity sha512-oqlA6VEK3NcBf/DiO1cz3Pu0QjQQJ6rRjtzEB+ST+WGqxR44mpdxbkeC3z5ka4SnfGdzt9rPYcLXZggilnEN3A==
-  dependencies:
-    codependency "^2.1.0"
-    loader-utils "^1.1.0"
 
 vuetify@^1.3.9:
   version "1.3.9"
