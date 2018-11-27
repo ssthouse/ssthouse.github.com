@@ -2,7 +2,10 @@ var path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -15,7 +18,13 @@ function resolve(dir) {
 
 module.exports = {
   entry: './src/main.js',
-  plugins: [htmlPlugin, new VuetifyLoaderPlugin(), new VueLoaderPlugin(), new BundleAnalyzerPlugin()],
+  plugins: [
+    htmlPlugin,
+    new VuetifyLoaderPlugin(),
+    new VueLoaderPlugin(),
+    new BundleAnalyzerPlugin(),
+    new CompressionPlugin()
+  ],
   output: {
     filename: '[name]_bundle.js',
     path: __dirname + '/../',
@@ -78,6 +87,21 @@ module.exports = {
           }
         ]
       }
+    ]
+  },
+  optimization: {
+    minimizer: [
+      // we specify a custom UglifyJsPlugin here to get source maps in production
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: true,
+          ecma: 6,
+          mangle: true
+        },
+        sourceMap: true
+      })
     ]
   }
 }

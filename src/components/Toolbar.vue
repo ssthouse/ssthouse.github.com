@@ -41,7 +41,7 @@ export default {
 </script>
 <style lang="less">
 .lang-selector {
-  min-width: 280px;
+  min-width: 200px;
   background-color: #212121 !important;
   box-shadow: none !important;
 }
