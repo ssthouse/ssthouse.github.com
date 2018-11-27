@@ -7,13 +7,35 @@ import Vue from 'vue'
 import Storage from './store/storage'
 import Eventbus from './components/utils/EventBus'
 import store from './store/index'
-import Vuetify from 'vuetify/lib'
+import Vuetify, {
+  VApp,
+  VToolbar,
+  VCard,
+  VCardText,
+  VCardMedia,
+  VFlex,
+  VLayout,
+  VContainer,
+  transitions
+} from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 import i18n from './i18n/index'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuetify)
+Vue.use(Vuetify, {
+  components: {
+    VApp,
+    VToolbar,
+    VCard,
+    VCardText,
+    VCardMedia,
+    VFlex,
+    VLayout,
+    VContainer,
+    transitions
+  }
+})
 Vue.use(Eventbus)
 Vue.use(Storage)
 
