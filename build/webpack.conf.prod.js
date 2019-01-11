@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new VueLoaderPlugin(),
-    new CompressionPlugin(),
+    new CompressionPlugin()
     // new BundleAnalyzerPlugin({
     //   analyzerPort: 9999
     // })
@@ -102,6 +102,12 @@ module.exports = {
         },
         sourceMap: true
       })
-    ]
+    ],
+    splitChunks: {
+      chunks: 'all',
+      minSize: 30000,
+      maxSize: 244000,
+      minChunks: 1
+    }
   }
 }
