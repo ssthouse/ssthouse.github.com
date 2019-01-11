@@ -4,7 +4,6 @@ import App from './App'
 import router from './router'
 // import VueI18n from 'vue-i18n'
 import Vue from 'vue'
-import Storage from './store/storage'
 import Eventbus from './components/utils/EventBus'
 import store from './store/index'
 import Vuetify, {

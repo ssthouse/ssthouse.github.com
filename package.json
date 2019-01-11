@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "leancloud-storage": "^2.4.0",
-    "localforage": "^1.5.6",
     "vue": "^2.5.17",
     "vue-i18n": "^8.3.0",
     "vue-router": "^3.0.2",

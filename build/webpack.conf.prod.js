@@ -16,14 +16,15 @@ function resolve(dir) {
 }
 
 module.exports = {
+  mode: 'production',
   entry: './src/main.js',
   plugins: [
     htmlPlugin,
     new VueLoaderPlugin(),
-    new CompressionPlugin()
-    // new BundleAnalyzerPlugin({
-    //   analyzerPort: 9999
-    // })
+    new CompressionPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerPort: 9999
+    })
   ],
   output: {
     filename: '[name]_bundle.js',
