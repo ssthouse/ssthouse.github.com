@@ -21,10 +21,7 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new VueLoaderPlugin(),
-    new CompressionPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerPort: 9999
-    })
+    new CompressionPlugin()
   ],
   output: {
     filename: '[name]_bundle.js',
