@@ -48,7 +48,6 @@ Vue.use(Vuetify, {
   }
 })
 Vue.use(Eventbus)
-Vue.use(Storage)
 
 /* eslint-disable no-new */
 new Vue({
