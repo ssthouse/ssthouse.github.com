@@ -3,6 +3,9 @@
     ["env", { "modules": false }],
     "stage-2"
   ],
+  "plugins": [
+    "syntax-dynamic-import"
+  ],
   "comments": false,
   "env": {
     "test": {

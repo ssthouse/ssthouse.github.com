@@ -5,10 +5,11 @@
   "author": "ssthouse <ssthouse@163.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.conf.dev.js --mode development --hot",
+    "dev": "webpack-dev-server --config build/webpack.conf.dev.js --mode development --hot --progress",
     "build": "webpack --config build/webpack.conf.prod.js --mode production"
   },
   "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "leancloud-storage": "^2.4.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.3.0",

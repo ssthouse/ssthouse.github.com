@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Me from '../components/me/Me.vue'
-import Blog from '../components/blog/Blog.vue'
-import Code from '../components/code/Code.vue'
+
+const Me = () => import('../components/me/Me.vue')
+const Blog = () => import('../components/blog/Blog.vue')
+const Code = () => import('../components/code/Code.vue')
 
 Vue.use(Router)
 

@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new VueLoaderPlugin(),
-    new CompressionPlugin()
+    new CompressionPlugin(),
   ],
   output: {
     filename: '[name]_bundle.js',
