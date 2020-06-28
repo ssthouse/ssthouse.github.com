@@ -25,8 +25,7 @@ module.exports = {
   ],
   output: {
     filename: '[name]_bundle.js',
-    path: __dirname + '/../',
-    publicPath: '/'
+    path: resolve('dist'),
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
