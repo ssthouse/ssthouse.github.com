@@ -1,7 +1,7 @@
 module.exports = {
   title: "ssthouse",
   description: 'Hi There!',
-  dest: 'public',
+  dest: 'dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
@@ -67,13 +67,13 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'reco_luan',
+    author: 'ssthouse',
     // 作者头像
     authorAvatar: '/avatar.png',
     // 备案号
     record: 'xxxx',
     // 项目开始时间
-    startYear: '2017'
+    startYear: '2015'
     /**
      * 密钥 (if your blog is private)
      */
