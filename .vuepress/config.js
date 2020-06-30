@@ -95,5 +95,17 @@ module.exports = {
   },
   markdown: {
     lineNumbers: true
-  }
+  },
+  // <script data-ad-client="ca-pub-4922463313862522" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  head: [ ['script', {}, `
+        var _hmt = _hmt || []; 
+        (function() { 
+        var hm = document.createElement("script"); 
+        hm['data-ad-client'] = "ca-pub-4922463313862522"
+        hm['src'] = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        hm['async'] = true
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s); 
+        })(); 
+    `]]
 }  
